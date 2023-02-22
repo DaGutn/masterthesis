@@ -1,11 +1,10 @@
 all: build/thesis.pdf
-
-
-TeXOptions = -lualatex \
-			 -interaction=nonstopmode \
-			 -halt-on-error \
-			 -output-directory=build
                                                                                 
+TeXOptions = -lualatex \
+			 -pvc \
+			 -halt-on-error \
+			 -interaction=nonstopmode \
+
 build/thesis.pdf: FORCE | build
 	latexmk $(TeXOptions) thesis.tex
 	
