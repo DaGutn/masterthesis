@@ -1,6 +1,6 @@
 # the directory in which all generated output files are written
 $out_dir = 'build';
-# latexmk will use lualatex with the given options as default in place of the regular lualatex command
+# latexmk will use lualatex with the given options as default in place of the regular plain lualatex command
 $lualatex = 'lualatex -pvc %O %S';
 # generate a pdf file using lualatex with the command specified by $lualatex
 $pdf_mode = 4;

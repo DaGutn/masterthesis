@@ -13,11 +13,13 @@
 \documentclass[
   tucolor,       % remove for less green,
   BCOR=12mm,     % 12mm binding corrections, adjust to fit your binding
-  parskip=half,  % new paragraphs start with half line vertical space
+  % parskip=half,  % new paragraphs start with half line vertical space
   open=any,      % chapters start on both odd and even pages
   cleardoublepage=plain,  % no header/footer on blank pages
 ]{tudothesis}
-
+\setlength{\parskip}{10pt}
+\setlength{\parindent}{0pt}
+\raggedbottom
 
 % Warning, if another latex run is needed
 \usepackage[aux]{rerunfilecheck}
@@ -33,7 +35,7 @@
 
 % load english (for abstract) and ngerman language
 % the main language has to come last
-\usepackage[american, ngerman]{babel}
+\usepackage[ngerman, american]{babel}
 
 % intelligent quotation marks, language and nesting sensitive
 \usepackage[autostyle]{csquotes}
@@ -119,7 +121,19 @@
   autolang=hyphen, % load hyphenation rules for if language of bibentry is not
                    % german, has to be loaded with \setotherlanguages
                    % in the references.bib use langid={en} for english sources
+  sorting=none,
 ]{biblatex}
+% \bibliographystyle{unsrt}  % sorts the references by appearance in the text
+\AtEveryBibitem{  % all the fields to exclude from showing up in the bibliography
+  \clearfield{url}
+  \clearfield{issn}
+  \clearlist{language}
+  \clearfield{urlyear}  % urldate is split up into urlyear, urlmonth, urlday
+  \clearfield{month}
+  \clearfield{pages}
+  \clearfield{file}
+  \clearfield{abstract}
+}
 \addbibresource{references.bib}  % the bib file to use
 \DefineBibliographyStrings{german}{andothers = {{et\,al\adddot}}}  % replace u.a. with et al.
 
@@ -129,12 +143,28 @@
 \usepackage{bookmark}
 \usepackage[shortcuts]{extdash}
 
+
+%------------------------------------------------------------------------------
+%-----------------------   self-definded functions   --------------------------
+%------------------------------------------------------------------------------
+
+\newenvironment{naligned}{
+  \vspace{5pt}
+  \begin{equation}
+    \begin{aligned}
+}{
+    \end{aligned}
+    \vspace{5pt}
+  \end{equation}
+}
+
+
 %------------------------------------------------------------------------------
 %-------------------------    Angaben zur Arbeit   ----------------------------
 %------------------------------------------------------------------------------
 
 \author{David Gutnikov}
-\title{Study of ultrafast demagnetization of AFM material CrSBr with adsorbed molecules}
+\title{Influence of molecule interface on THz lattice dynamics in AFM material $\text{FePS}_3$}
 \date{2023}
 \birthplace{dortmund}
 \chair{Cinchetti Group}
@@ -149,32 +179,32 @@
 
 \begin{document}
 \frontmatter
-\input{content/hints.tex}
+% \input{content/hints.tex}
 \maketitle
 
 % Gutachterseite
-\makecorrectorpage
+% \makecorrectorpage
 
 % hier beginnt der Vorspann, nummeriert in römischen Zahlen
-\input{content/00_abstract.tex}
+% \input{content/00_abstract.tex}
 \tableofcontents
 
 \mainmatter
 % Hier beginnt der Inhalt mit Seite 1 in arabischen Ziffern
-\input{content/01_einleitung.tex}
-\input{content/02_struktur.tex}
-\input{content/03_grundlagen.tex}
-\input{content/04_figs_tabs.tex}
+% \input{content/01_introduction.tex}
+\input{content/02_experimental_setup.tex}
+% \input{content/03_results.tex}
+% \input{content/04_figs_tabs.tex}
 
-\appendix
+% \appendix
 % Hier beginnt der Anhang, nummeriert in lateinischen Buchstaben
-\input{content/a_anhang.tex}
+% \input{content/a_anhang.tex}
 
 \backmatter
 \printbibliography
 
-\cleardoublepage
+% \cleardoublepage
 % From https://www.tu-dortmund.de/studierende/im-studium/pruefungsangelegenheiten/allgemeine-vordrucke/
-\includepdf{content/Eidesstattliche_Versicherung.pdf}
+% \includepdf{content/Eidesstattliche_Versicherung.pdf}
 
 \end{document}
