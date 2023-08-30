@@ -1,9 +1,9 @@
 all: build/thesis.pdf
                                                                                 
-TeXOptions = -lualatex \
-			 -pvc \
+TeXOptions = -pvc \
+			 -lualatex \
+			 -interaction=errorstopmode \
 			 -halt-on-error \
-			 -interaction=nonstopmode \
 
 build/thesis.pdf: FORCE | build
 	latexmk $(TeXOptions) thesis.tex
