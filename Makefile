@@ -1,8 +1,8 @@
 all: build/thesis.pdf
                                                                                 
-TeXOptions = -pvc \
+TeXOptions = -pvc
 			 -lualatex \
-			 -interaction=errorstopmode \
+			 -interaction=nonstopmode \
 			 -halt-on-error \
 
 build/thesis.pdf: FORCE | build

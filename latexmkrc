@@ -9,4 +9,5 @@ $pdf_mode = 4;
 # a full clean-up, including the .pdf files is done, when the clean-up option -c/-C is selected
 $cleanup_mode = 1;
 # the extra files to be cleaned up, when the clean-up option -c/-C is selected
-$clean_ext = 'bbl run.xml'
+$clean_ext = 'bbl run.xml';
+

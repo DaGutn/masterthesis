@@ -1,0 +1,11 @@
+for the purpose of this thesis most solids can be described in the frame work of the 3-temperature-model consisting of three distinct systems
+
+clearly following the same trend
+
+was under a bit of scrutany for a time
+was under discussion
+
+as previously stated
+
+Octahedral field; Crystal splitting picture for one electron; Crystal and exchange splitting of similar size in NiO => still a high spin ground state ($S=1$) where the Hunds rule apply; One electron picture gives intuitive understanding of crystal splitting, but as it gives not the right size of the splitting the Russel-Saunders coupling (/LS-coupling) has to be used; as angular momenta S, L from the multielectron picture are used in the same way as the s, l of the single electrons the energy levels given by the Russel-Saunders coupling are split in the crystal field the same way as the ones from the single electrons \lit{B. Fromme}
+
