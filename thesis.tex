@@ -36,6 +36,10 @@
 % load english (for abstract) and ngerman language
 % the main language has to come last
 \usepackage[ngerman, american]{babel}
+% \addto\extrasamerican{%
+%   \def\equationautorefname{Eq.}%
+%   \def\figureautorefname{Fig.}%
+% }
 
 % intelligent quotation marks, language and nesting sensitive
 \usepackage[autostyle]{csquotes}
@@ -163,7 +167,6 @@
 }
 
 \newcommand{\lit}[1]{\textbf{\textcolor{violet}{\uppercase{#1}}}}
-
 %------------------------------------------------------------------------------
 %-------------------------    Angaben zur Arbeit   ----------------------------
 %------------------------------------------------------------------------------
@@ -171,7 +174,7 @@
 \author{David Gutnikov}
 \title{Coherent spin dynamics in NiO/C60}
 \date{2023}
-\birthplace{dortmund}
+\birthplace{Dortmund}
 \chair{Cinchetti Group}
 \division{Faculty of Physics}
 \thesisclass{Master of Science}
@@ -183,6 +186,9 @@
 \titlehead{\includegraphics[height=1.5cm]{logos/tu-logo.pdf}}
 
 \begin{document}
+\renewcommand{\figureautorefname}{Fig.}
+\renewcommand{\equationautorefname}{Eq.}
+
 \frontmatter
 % \input{content/hints.tex}
 \maketitle
@@ -197,9 +203,9 @@
 \mainmatter
 % Hier beginnt der Inhalt mit Seite 1 in arabischen Ziffern
 % \input{content/01_introduction.tex}
-\input{content/02_theory.tex}
+% \input{content/02_theory.tex}
 % \input{content/03_experimental_setup.tex}
-% \input{content/04_results.tex}
+\input{content/04_results.tex}
 % \input{content/05_figs_tabs.tex}
 
 % \appendix
