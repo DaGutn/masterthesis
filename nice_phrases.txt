@@ -10,3 +10,6 @@ as previously stated
 Octahedral field; Crystal splitting picture for one electron; Crystal and exchange splitting of similar size in NiO => still a high spin ground state ($S=1$) where the Hunds rule apply; One electron picture gives intuitive understanding of crystal splitting, but as it gives not the right size of the splitting the Russel-Saunders coupling (/LS-coupling) has to be used; as angular momenta S, L from the multielectron picture are used in the same way as the s, l of the single electrons the energy levels given by the Russel-Saunders coupling are split in the crystal field the same way as the ones from the single electrons \lit{B. Fromme}
 
 sth expresses/manifests itself in
+
+there are two AFMR modes expected for an easy plane AFM with an in-plane anisotropy
+(discussion of Unexpected behavior of the antiferromagnetic mode of NiO, Grimsditch (1998))
