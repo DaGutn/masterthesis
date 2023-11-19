@@ -13,3 +13,23 @@ sth expresses/manifests itself in
 
 there are two AFMR modes expected for an easy plane AFM with an in-plane anisotropy
 (discussion of Unexpected behavior of the antiferromagnetic mode of NiO, Grimsditch (1998))
+
+
+dependence on pump polarization is fingerprint of a nonthermal effect (for the NiPS3 dependencies)
+
+Can be traced back to
+
+The meaning behind it being
+
+leads to the conclusion that
+
+raises the question of
+
+this description will heavily lean on the paper of
+
+which is sensitive of
+
+
+
+
+
