@@ -1,6 +1,6 @@
 \chapter{Results and discussion}
-\section{Examplary analysis of pump-probe trace}
-The analysis of the pump probe time traces was either done by fitting the data or by applying a FFT.
+\section{Exemplary analysis of pump-probe trace}
+The analysis of the pump probe time traces was either done by fitting the data or by applying a fast fourier transform (FFT).
 Here we use a suitable dataset to demonstrate both of these methods.
 \autoref{fig:example_analysis_fit}b
 \begin{figure}[ht]
@@ -18,70 +18,85 @@ In relation to the higher frequency mode the lower frequency mode resembles more
 \end{equation}
 $\lambda_{\text{lf}}$ represents the decay constant of the lf-oscillation and $\phi_{\text{lf}}$ is its phase.
 % to exclude any exponential and linear contributions to the background
-So after subtracting the GHz-fit from the data the simpler fit function \autoref{eqn:fit_hf}, only featuring a exponentially decaying sine-wave, is used to extract the frequency $f_{\text{hf}}$ and amplitude $A_{\text{hf}}$ of the hf-mode.
-This fit is depicted in the lower part of \autoref{fig:example_analysis_fit}a by the red line
+After subtracting the GHz-fit from the data the simpler fit function \autoref{eqn:fit_hf}, only featuring a exponentially decaying sine-wave, is used to extract the frequency $f_{\text{hf}}$ and amplitude $A_{\text{hf}}$ of the hf-mode.
 \begin{equation}
     f(t) = A_{\text{hf}} \cdot \exp(-\lambda_{\text{hf}} t) \cdot \cos(2 \pi f_{\text{hf}} t + \phi_{\text{hf}})
     \label{eqn:fit_hf}
 \end{equation}
-The only important parameters in the context of this thesis being the amplitude and the frequency of the modes, the FFT represents another approach.
+This fit is depicted in the lower part of \autoref{fig:example_analysis_fit}a by the red line.
+The results of both fits are shown in \autoref{fig:example_analysis_fit}b as the red markers.
+
+The only important parameters in the context of this thesis being the amplitude and the frequency of the modes, the FFT represents another approach for the data analysis.
 Here only the background is fitted in preparation for applying the FFT, so that the oscillations are singled out and so that they can be broken down into a linear combination of sine or cosine functions, as is the premise of a fourier transform.
-A discreet fourier transform of a perfectly sinusoidal signal yields an infinitely thin peak at one exact frequency.
-%  making up the signal.
-The exponential decay of the oscillation in the time-domain translates to a finite width of the resulting peak in the frequency domain together with a reduction in height of the peak, as the amplitudes get distributed over more bins
+A discrete fourier transform of a perfectly sinusoidal signal yields an infinitely thin peak at one exact frequency.
+The exponential decay of the oscillation in the time-domain translates to a finite width of the resulting peak in the frequency domain together with a reduction in the height of the peak.
+This effect is called dephasing and happens because the amplitudes get redistributed over more frequency bins, as the uncertainty rises.
+The faster the decay happens, the wider the peak gets, as you can see in \autoref{fig:example_analysis_fit} for both of the modes.
+The peak of the FFT associated with the lf-mode is much smaller than the amplitude acquired through the fit.
+The peak of the hf-mode is also slightly smaller than the amplitude of the fit which is also attributed to the same effect, albeit to a smaller extent.
+
+But more importantly, if no decay is visible in the observed time interval, this effect can be neglected.
+In view of this, the fitting method is used to analyze the measurements of NiO/C60, as a clear decay is visible there.
+The FFT method is used for the measurements of NiPS3, since no decay of the oscillations is discernable.
 
 
 \section{NiO/C60}
 \subsection{Absorption measurements on NiO/C60}
-NiO is used as a prototypical antiferromagnet 
-But for us it was particular interesting what changes we could detect in the magnetic behavior by covering the NiO with a molecule layer.
-To try this, C60 was used in part because of its availability to our group, but mainly because of its strong interaction with ferromagnetic surfaces / strong dipole formation when in contact with () ..... in the hope of it changing the magnetic anisotropy which has a direct influence on the magnon frequency in NiO.
+As described in ....., NiO is as a prototypical antiferromagnet which was already a subject of much research effort.
+In this thesis we focus on the changes we can detect in the magnetic behavior by covering the NiO with a molecular layer.
+To try this, C60 was used in part because it is widely available, but mainly because of its strong interaction with ferromagnetic surfaces \lit{Veenstra}.
+% C60 is a molecule which is
+% (strong surface dipole formation) when in contact with () ..... 
+Assuming that C60 changes the magnetic anisotropy which has a direct influence on the magnon frequency in NiO it is adsorbed on its surface.
 \begin{figure}[ht]
     \centering
     \includegraphics[width=0.7\textwidth]{pictures/plots/NiO_absorption_nm.pdf}
-    \caption{Showing the absorption spectra measured on the CARY system for pure NiO (blue line) and for NiO/C60 (red line).}
+    \caption{Absorption spectra measured on the CARY system for pure NiO (blue line) and for NiO/C60 (red line). The lower part is a zoom-in on the d-d transition.}
     \label{fig:NiO_absorption_nm}
 \end{figure}
 \FloatBarrier
-As the samples did not have the same size, a direct comparison of the two spectra by subtraction or division was not possible.
-Nonetheless, an obvious broadening of the exciton peak at \qty{1280}{nm} and the magnon-sideband at \qty{1273}{nm} is visible in \autoref{fig:NiO_absorption_nm}, especially in the zoomed-in view on the bottom.
-While still being distinct the peaks seem to have shifted slightly to higher energies by about \qty{1}{meV}.
-Furthermore some adidtional features between \qty{1350}{nm} and \qty{1400}{nm} are clearly visible in the spectrum of the NiO/C60 in contrast to the one from the pure NiO and may be worthwhile to examine.
+Ahead of the time-resolved measurements, static absorption spectra were acquired using the commercial spectroscopy Cary 6000i system by Agilent.
+Two \qty{15}{nm} thick NiO samples were measured, one pure NiO sample and one NiO sample with the adsorbed C60-molecules.
+\autoref{fig:NiO_absorption_nm} shows the absorption spectra of both of the samples in the range of 1000 to \qty{1500}{nm}.
+As the two samples did not have the same size, a direct comparison of the two spectra by subtraction or division was not possible.
+Nonetheless, an obvious broadening of the exciton peak at \qty{1280}{nm} and the magnon-sideband at \qty{1273}{nm} is visible in the spectrum of NiO/C60 in \autoref{fig:NiO_absorption_nm}, especially in the zoomed-in view on the bottom.
+While still being distinct, the exciton-magnon (X-M) peaks of NiO/C60 seem to have shifted slightly to higher energies by about \qty{1}{meV} with respect to the ones froms the pure NiO.
+Furthermore, some additional features between \qty{1350}{nm} and \qty{1400}{nm} are clearly visible in the spectrum of the NiO/C60 in contrast to the one from the pure NiO and may be worthwhile to examine.
 
-\subsection{Pump wavelenth dependence of NiO/C60}
-A pump wavelength dependence on pure NiO had already been done by Bossini et al. \lit{Bossini et al.} which is also featured here and which some of the following explanations are based on.
-Now we wanted to see what impact the hybridization of the pure NiO surface with the C60 molecule layer would have on the domain structure and thus on the coupling of the two magnon modes.
+\subsection{Pump wavelength dependence of NiO/C60}
+A pump wavelength dependence around the X-M peak (\qty{0.97}{eV}) on pure NiO has already been performed by Bossini et al. \lit{Bossini et al.} which is also featured here and which some of the following explanations are based on.
+Now we want to see what impact the hybridization of the pure NiO surface with the C60 molecule layer has on the domain structure and thus on the coupling of the two magnon modes.
 
 The pump wavelength dependence consists of measurements taken at different pump wavelenghts ranging from \qty{1158}{nm} to \qty{1362}{nm}, which are shown in \autoref{fig:NiO_pump_WL_dependence}.
-The traces cover a time interval of around \qty{25}{ps} ensuring that they encompass at least three whole periods of the LF-mode each lasting \qty{7.7}{ns}.
+The traces cover a time interval of around \qty{25}{ps} ensuring that they encompass at least three whole periods of the lf-mode each lasting \qty{7.7}{ns}.
 The start of the cross-correlation was taken as the zero point in the plot.
 To extract the frequency and amplitude of the lf-oscillations the data was fitted using the fit function \autoref{eqn:fit_lf}.
 The fits are indicated by the red lines in the plot. 
-Due to the absence of any oscillations, which is also visible by eye, it was not possible to fit the two uppermost traces and thus no red lines were plotted along them.
+Due to the absence of any lf-oscillations, it was not possible to fit the two uppermost traces and thus no red lines were plotted along them.
 After subtracting the fits of the hf-mode from the initial data we get the plots featured in \autoref{fig:NiO_pump_WL_dependence_THz}.
-Now only the hf-oscillations remain and thus an exponentially decaying sine-wave \autoref{eqn:fit_hf} is used to fit the data, which is again being indicated by the red lines.
+Now only the hf-oscillations remain and thus an exponentially decaying sine-wave \autoref{eqn:fit_hf} is used to fit the data, which is again indicated by the red lines.
 \begin{figure}[ht]
     \centering
     \includegraphics{pictures/plots/NiO_pump_WL_dependence.pdf}
-    \caption{The time traces taken with pump-probe spectroscopy for different pump wavelengths ranging from \qty{1158}{nm} to \qty{1362}{nm} are shown here. As the two oscillations are so pronounced in these plots, an analysis by fitting the data was chosen. The red line depicts the fit of the lf-mode together with the background.}
+    \caption{The time traces taken with pump-probe spectroscopy for different pump wavelengths ranging from \qty{1158}{nm} to \qty{1362}{nm} are shown here. As the two oscillations are well-pronounced in these plots, an analysis by fitting the data was chosen. The red line depicts the fit of the lf-mode together with the background.}
     \label{fig:NiO_pump_WL_dependence}
 \end{figure}
 \FloatBarrier
-The two extracted frequencies from each dataset are then plotted against their respective energies and shown in \autoref{fig:NiO_pump_WL_dependence_freq}.
-For the hf-mode the plot resembles a straight line with a constant frequency at around \qty{1.07}{THz}.
-This coincides with the extensive amount of values found in the literature \lit{3 magnon modes}.
-The values for the lf-mode also stay about the same throughout the different pump energies.
-They shift slightly more than the hf-frequency.
-However, the uncertainty intervals given by the fits overlap heavily, so that an average frequency at around \qty{0.13}{THz} can be established, which is again corroborated by literature \lit{magnon modes}.
+The two extracted frequencies from each dataset are then plotted against their respective energies in \autoref{fig:NiO_pump_WL_dependence_freq}.
+For the hf-mode the plot resembles a straight line with a constant frequency at \qty{1.07}{THz}.
+This coincides with the values found in several literature sources \lit{3 magnon modes}.
+The values for the lf-mode also stay about the same throughout the different pump energies, varying between 0.12 and \qty{0.15}{THz} with an average of \qty{0.13}{THz}.
+% They shift slightly more than the hf-frequency.
+% However, the uncertainty intervals given by the fits overlap heavily, so that an average frequency at around \qty{0.13}{THz} can be established, which is again corroborated by literature \lit{magnon modes}.
 \begin{figure}[ht]
     \centering
     \includegraphics{pictures/plots/NiO_pump_WL_dependence_THz.pdf}
-    \caption{The measured data is shown after subtracting the fit of the lf-mode from it. The red line shows the fit of the hf-mode. The two uppermok  st traces are not featured, as they could not be fitted and thus the hf-mode could not be singled out.}
+    \caption{The measured data is shown after subtracting the fit of the lf-mode from it. The red line shows the fit of the hf-mode. The two uppermost traces are not featured, as they could not be fitted and thus the hf-mode could not be singled out.}
     \label{fig:NiO_pump_WL_dependence_THz}
 \end{figure}
 \FloatBarrier
-The change in amplitude is much more obvious and can already clearly be seen in \autoref{fig:NiO_pump_WL_dependence}.
-Following the same procedure as for the frequencies, in \autoref{fig:NiO_pump_WL_dependence_ampl} the spectral dependence of the amplitudes of the two magnon modes is displayed.
+In contrast to the WL dependence of the frequency the change in amplitude for different pump wavelengths is much more obvious and can already clearly be seen in \autoref{fig:NiO_pump_WL_dependence}.
+Following the same procedure as for the frequencies, in \autoref{fig:NiO_pump_WL_dependence_ampl} the spectral dependence of the amplitudes of the two magnon modes is displayed in dark orange and dark blue.
 \begin{figure}[ht]
     \centering
     \includegraphics{pictures/plots/NiO_pump_WL_dependence_freq.pdf}
@@ -97,7 +112,7 @@ Following the same procedure as for the frequencies, in \autoref{fig:NiO_pump_WL
 \FloatBarrier
 Comparing it to the absorption spectra a clear broadening of the resonance can be seen, as the ultrashort laser pulses have a pulse duration of \qty{75}{fs} and thus a finite bandwidth of about \qty{40}{meV}.
 Under the assumption that the spectral shape of the laser pulses is gaussian the position maxima of the spectral dependencies should not change.
-Here a comparison between the data taken on the \qty{15}{nm} thick NiO crystal with and without adsorbed C60 molecules is done.
+Here, a comparison between the data taken on the \qty{15}{nm} thick NiO crystal with and without adsorbed C60 molecules is done.
 The pale colored curves in the background show the data on pure NiO and the ones in deeper colors show the measurements done on the NiO/C60 system.
 It should be noted here, that the measurements on the pure NiO were done previously within the scope of preliminary measurements.
 On the basis of the absorption spectrum as seen in \autoref{fig:7}, different areas can be identified in the spectral dependencies.
@@ -106,7 +121,7 @@ Albeit, in contrast to the hf-mode the lf-mode demonstrates a slightly higher va
 ISRS is thought of as an effective magnetic field exerting maximum torque on spins lying perpendicular to it, so that the contributions from different T-domains do not cancel out eachother \lit{2 Kirilyuk}.
 Next, the energy range 0.95-\qty{0.99}{eV} is described.
 Representing the area where the pump energy covers the X-M peak at around \qty{0.97}{eV}, with a tolerance of half of the pulse bandwidth, it features a prominent amplification of both modes.
-The coherent amplification of the hf-mode being easy to understand as the pump induces the X-M transition previously explained in \autoref{sec:x_m}.
+The coherent amplification of the hf-mode is easy to understand as the pump induces the X-M transition previously explained in \autoref{sec:x_m}.
 \begin{figure}[ht]
     \centering
     \includegraphics[width=0.5\textwidth]{pictures/7.png}
@@ -137,15 +152,16 @@ Now, a stepsize of \qty{0.1}{eV} in the energy range of 0.95 to \qty{1.02}{eV} w
 A tremendeous decrease in signal quality, compared to the measurements before, can be seen.
 The hf-oscillation are still easily discernible, but a noticeable reduction of their quality took place.
 The lf-mode on the other hand became nearly indistinguishable.
-For a direct comparison the measured traces at \qty{1278}{nm} or \qty{0.97}{eV} pump were choosen to be plotted next to eachother in \autoref{fig:NiO_pump_1278nm_comparison}, as the data after still retains some of its quality.
+For a direct comparison the measured traces at \qty{1278}{nm} (\qty{0.97}{eV}) pump were plotted next to eachother in \autoref{fig:NiO_pump_1278nm_comparison}.
 It is assumed that during the process of taking the absorption measurements some kind of contaminant adsorbed on the surface or the surface got scratched.
 This would make the surface uneven, which in turn weakens the coherence of the modes leading to a compromised signal.
 \begin{figure}[ht]
     \centering
     \includegraphics{pictures/plots/NiO_pump_WL_dependence_2.pdf}
     \caption{The time traces for different pump wavelengths ranging from \qty{1215}{nm} to \qty{1305}{nm} are shown here. The same procedure as in \autoref{fig:NiO_pump_WL_dependence} was also applied here.}
-    \label{fig:NiO_pump_WL_dependence_2.pdf}
+    \label{fig:NiO_pump_WL_dependence_2}
 \end{figure}
+
 The same procedure as before was applied to analyze the data in \autoref{fig:NiO_pump_WL_dependence_2}.
 As is clearly visible, the amplitude of the lf-mode is reduced to a vanishing value.
 This means that the reliability of the fits of the lf-mode is diminished, as a slight variation of the less important fit parameters results in a substantial change in the two most significant fit parameters, the amplitude and to a lesser extent, the frequency.
@@ -160,7 +176,7 @@ The amplification peak still looks sharper than in the NiO sample showing a clea
 \FloatBarrier
 
 \subsection{Measurements at 1400nm pump WL}
-Another noticable feature in the absorption spectrum are small peaks around \qty{1400}{nm}.
+Another noticeable feature in the absorption spectrum in \autoref{fig:NiO_absorption_nm} are small peaks around \qty{1400}{nm}.
 Pumping at this wavelength resulted in the traces shown in \autoref{fig:NiO_pump_1400nm_1320nm}.
 Additionally, for the sake of reference, the pump was set to \qty{1320}{nm} as in that area of the absorption spectrum no features can be discerned representing the absence of any possible dynamics.
 The data taken with \qty{1400}{nm} pump displays a feature in the first few picoseconds which persists at different pump powers and temperatures and does not change its shape.
@@ -326,7 +342,7 @@ The temperature dependence was measured to be able to decicively determine wheth
 The pump and probe polarizations were set to 180° and 150° and the temperature was varied from 77 to \qty{170}{K} with a stepsize of \qty{10}{K} except around the Neél temperature, where the stepsize was reduced to \qty{5}{K}.
 What we see now in \autoref{fig:NiPS3_temp_dependence_diff} is that both modes completely vanish above a certain temperature.
 For the lf-mode this temperature coincides with the Neél temperature, which proves an irrefutable connection to the magnetic system.
-For the hf-mode whose detected amplitude is always smaller than the one from the lf-mode, any noticable amplitude value vanishes after around \qty{120}{K}.
+For the hf-mode whose detected amplitude is always smaller than the one from the lf-mode, any noticeable amplitude value vanishes after around \qty{120}{K}.
 \begin{figure}[hbt!]
     \centering
     \includegraphics{pictures/plots/NiPS3_temp_dependence_diff.pdf} \vspace{-0.3cm}

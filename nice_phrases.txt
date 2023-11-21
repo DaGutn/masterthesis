@@ -30,6 +30,8 @@ this description will heavily lean on the paper of
 which is sensitive of
 
 
+Raman-like mechanisms are non-dissipative meaning little to no laser-heating takes place
+
 
 
 
