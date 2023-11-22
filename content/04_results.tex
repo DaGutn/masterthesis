@@ -1,42 +1,44 @@
 \chapter{Results and discussion}
 \section{Exemplary analysis of pump-probe trace}
-The analysis of the pump probe time traces was either done by fitting the data or by applying a fast fourier transform (FFT).
-Here we use a suitable dataset to demonstrate both of these methods.
-\autoref{fig:example_analysis_fit}b
+The analysis of the pump-probe time traces was either done by fitting the data or by applying a fast fourier transform (FFT).
+We can measure and analyze the rotation of polarization as the normalized difference between the two photodiode inputs and the transient reflectivity as the sum of the two photodiode inputs.
+In \autoref{fig:example_analysis_fit}b we use a suitable dataset of rotation of polarization to demonstrate both of these methods.
 \begin{figure}[ht]
     \centering
     \includegraphics{pictures/plots/example_analysis_fit.pdf}
-    \caption{\textbf{a)} An example trace analyzed using the fitting functions \autoref{eqn:fit_hf} and \autoref{eqn:fit_lf}. \textbf{b)} After subtracting a linear background a FFT was applied, producing this plot.}
+    \caption{\textbf{a)} An example trace analyzed using the fitting functions \autoref{eqn:fit_hf} and \autoref{eqn:fit_lf}. \textbf{b)} After subtracting a linear background an FFT was applied, producing this plot.}
     \label{fig:example_analysis_fit}
 \end{figure}
 \FloatBarrier
-The upper part of \autoref{fig:example_analysis_fit}a shows the data as well the first "lf-fit", indicated by a solid red line, done to extract the frequency $f_{\text{lf}}$ and amplitude $A_{\text{lf}}$ of the lower frequency mode by fitting \autoref{eqn:fit_lf} to the data.
-In relation to the higher frequency mode the lower frequency mode resembles more of a background which is why any exponential and linear contributions to the background are also included in \autoref{eqn:fit_lf}.
+The upper part of \autoref{fig:example_analysis_fit}a shows the data as well the first "lf-fit", indicated by a solid red line, done to extract the frequency $f_{\text{lf}}$ and amplitude $A_{\text{lf}}$ of the lower frequency mode by fitting
 \begin{equation}
     f(t) = A_{\text{lf}} \cdot \exp(-\lambda_{\text{lf}} t) \cdot \cos(2 \pi f_{\text{lf}} t + \phi_{\text{lf}}) + C \cdot \exp(-\lambda t) + D \cdot x + E
     \label{eqn:fit_lf}
 \end{equation}
+to the data.
 $\lambda_{\text{lf}}$ represents the decay constant of the lf-oscillation and $\phi_{\text{lf}}$ is its phase.
-% to exclude any exponential and linear contributions to the background
-After subtracting the GHz-fit from the data the simpler fit function \autoref{eqn:fit_hf}, only featuring a exponentially decaying sine-wave, is used to extract the frequency $f_{\text{hf}}$ and amplitude $A_{\text{hf}}$ of the hf-mode.
+From the viewpoint of the higher frequency mode the lower frequency mode resembles more of a background which is why any exponential and linear contributions to the background are also included in \autoref{eqn:fit_lf}.
+% In relation to the higher frequency mode the lower frequency mode resembles more of a background which is why any exponential and linear contributions to the background are also included in \autoref{eqn:fit_lf}.
+After subtracting the GHz-fit from the data the simpler fit function
 \begin{equation}
-    f(t) = A_{\text{hf}} \cdot \exp(-\lambda_{\text{hf}} t) \cdot \cos(2 \pi f_{\text{hf}} t + \phi_{\text{hf}})
+    f(t) = A_{\text{hf}} \cdot \exp(-\lambda_{\text{hf}} t) \cdot \cos(2 \pi f_{\text{hf}} t + \phi_{\text{hf}}) \;,
     \label{eqn:fit_hf}
 \end{equation}
+only featuring an exponentially decaying sine-wave, is used to extract the frequency $f_{\text{hf}}$ and amplitude $A_{\text{hf}}$ of the hf-mode.
 This fit is depicted in the lower part of \autoref{fig:example_analysis_fit}a by the red line.
 The results of both fits are shown in \autoref{fig:example_analysis_fit}b as the red markers.
 
-The only important parameters in the context of this thesis being the amplitude and the frequency of the modes, the FFT represents another approach for the data analysis.
-Here only the background is fitted in preparation for applying the FFT, so that the oscillations are singled out and so that they can be broken down into a linear combination of sine or cosine functions, as is the premise of a fourier transform.
+Since the only important parameters in the context of this thesis are the amplitude and the frequency of the modes, the FFT represents another approach for the data analysis.
+Here, only the background is fitted in preparation for applying the FFT, so that the oscillations are singled out and so that they can be broken down into a linear combination of sine or cosine functions, as is the premise of a fourier transform.
 A discrete fourier transform of a perfectly sinusoidal signal yields an infinitely thin peak at one exact frequency.
 The exponential decay of the oscillation in the time-domain translates to a finite width of the resulting peak in the frequency domain together with a reduction in the height of the peak.
 This effect is called dephasing and happens because the amplitudes get redistributed over more frequency bins, as the uncertainty rises.
 The faster the decay happens, the wider the peak gets, as you can see in \autoref{fig:example_analysis_fit} for both of the modes.
-The peak of the FFT associated with the lf-mode is much smaller than the amplitude acquired through the fit.
-The peak of the hf-mode is also slightly smaller than the amplitude of the fit which is also attributed to the same effect, albeit to a smaller extent.
+The peak of the FFT associated with the lf-mode is much lower than the amplitude acquired through the fit.
+The peak of the hf-mode is also slightly lower than the amplitude of the fit which is also attributed to the same effect, albeit to a smaller extent.
 
 But more importantly, if no decay is visible in the observed time interval, this effect can be neglected.
-In view of this, the fitting method is used to analyze the measurements of NiO/C60, as a clear decay is visible there.
+In view of this, the fitting method is used to analyze the measurements on NiO/C60, as a clear decay is visible there.
 The FFT method is used for the measurements of NiPS3, since no decay of the oscillations is discernable.
 
 
@@ -100,13 +102,13 @@ Following the same procedure as for the frequencies, in \autoref{fig:NiO_pump_WL
 \begin{figure}[ht]
     \centering
     \includegraphics{pictures/plots/NiO_pump_WL_dependence_freq.pdf}
-    \caption{Here the pump wavelength dependencies of the frequency of both the LF- and the HF-modes in NiO/C60 are shown.}
+    \caption{Here, the pump wavelength dependencies of the frequency of both the LF- and the HF-modes in NiO/C60 are shown.}
     \label{fig:NiO_pump_WL_dependence_freq}
 \end{figure}
 \begin{figure}[ht]
     \centering
     \includegraphics{pictures/plots/NiO_pump_WL_dependence_ampl.pdf}
-    \caption{Here the pump wavelength dependencies of the amplitudes of both the LF- and the HF-modes in NiO/C60 are shown. Underlayed in paler colors, is the data for pure NiO. To make a comparison possible, every dependence is normalized to its highest value.}
+    \caption{Here, the pump wavelength dependencies of the amplitudes of both the LF- and the HF-modes in NiO/C60 are shown. Underlayed in paler colors, is the data for pure NiO. To make a comparison possible, every dependence is normalized to its highest value.}
     \label{fig:NiO_pump_WL_dependence_ampl}
 \end{figure}
 \FloatBarrier
@@ -147,7 +149,7 @@ Furthermore, a reduction of the height of the phonon sideband induced amplificat
     \caption{A comparison between the two measurements at \qty{1278}{nm} pump before measuring the absorption and after, to show the decrease in signal quality.}
     \label{fig:NiO_pump_1278nm_comparison}
 \end{figure}
-As there where too few points around the amplification peak, another set of measurements was done after the absorption measurements in this second region.
+In order to get more points around the amplification peak, another set of measurements was done after the absorption measurements in this second region.
 Now, a stepsize of \qty{0.1}{eV} in the energy range of 0.95 to \qty{1.02}{eV} was choosen for the pump, doubling the resolution of the spectral dependence.
 A tremendeous decrease in signal quality, compared to the measurements before, can be seen.
 The hf-oscillation are still easily discernible, but a noticeable reduction of their quality took place.
@@ -177,38 +179,43 @@ The amplification peak still looks sharper than in the NiO sample showing a clea
 
 \subsection{Measurements at 1400nm pump WL}
 Another noticeable feature in the absorption spectrum in \autoref{fig:NiO_absorption_nm} are small peaks around \qty{1400}{nm}.
-Pumping at this wavelength resulted in the traces shown in \autoref{fig:NiO_pump_1400nm_1320nm}.
-Additionally, for the sake of reference, the pump was set to \qty{1320}{nm} as in that area of the absorption spectrum no features can be discerned representing the absence of any possible dynamics.
+Pumping at this wavelength resulted in the green trace shown in \autoref{fig:NiO_pump_1400nm_1320nm}.
+For the sake of reference, the pump was also set to \qty{1320}{nm} as in that area of the absorption spectrum no features can be discerned which represents the absence of any possible dynamics.
 The data taken with \qty{1400}{nm} pump displays a feature in the first few picoseconds which persists at different pump powers and temperatures and does not change its shape.
 This is taken as a reason to exclude this part of the trace from the analysis.
-The analysis consisting of subtracting an exponential background depicted by the red line and a subsequent FFT shown in \autoref{fig:NiO_pump_1400nm_1320nm_FFT}.
+For the analysis an exponential background was subtracted depicted by the red line.
+The subsequent FFT is shown in \autoref{fig:NiO_pump_1400nm_1320nm_FFT}.
 \begin{figure}[ht]
     \centering
     \includegraphics{pictures/plots/NiO_pump_1400nm_1320nm.pdf} \vspace{-0.3cm}
-    \caption{To compare the time evolution of the sample after pumping in a region without any features at \qty{1320}{nm} with the one after pumping at \qty{1400}{nm} where some features in the absorption spectrum of NiO/C60 can be seen.}
+    \caption{The time evolution after pumping in a region without any features at \qty{1320}{nm} and the one after pumping at \qty{1400}{nm}, where some features in the absorption spectrum of NiO/C60 can be seen in \autoref{fig:NiO_absorption_nm}.}
     \label{fig:NiO_pump_1400nm_1320nm}
 \end{figure}
 % \FloatBarrier
 \begin{figure}[ht]
     \centering
     \includegraphics{pictures/plots/NiO_pump_1400nm_1320nm_FFT.pdf} \vspace{-0.3cm}
-    \caption{The FFT of both traces at \qty{1320}{nm} and \qty{1400}{nm} pump to compare the.}
+    \caption{The FFT of both traces at \qty{1320}{nm} and \qty{1400}{nm} pump.}
     \label{fig:NiO_pump_1400nm_1320nm_FFT}
 \end{figure}
 \FloatBarrier
 The FFT of the \qty{1320}{nm}-data shows no distinct peaks.
 This supports the assumption of the lack of any induced dynamics at this pump wavelength.
-Contrary, the \qty{1400}{nm}-data exhibits a clear peak at \qty{0.62}{THz} standing out from the background noise, although it being very low in amplitude.
+Contrary, the \qty{1400}{nm}-data exhibits a clear peak at \qty{0.62}{THz} standing out from the background noise, although it is very low in amplitude.
 A mode with this frequency is not yet reported in literature and it is not completely evident if and what physical meaning it has.
 (For the purpose of clarifying this question a temperature dependence was carried out... hier weiß ich nicht, ob ich das überhaupt zeigen sollte, weil es wirklich gaarnichts aussagt)
 
 \section{NiPS3}
-Another interesting compound containing Ni is NiPS3.
-It belongs to a group of van-der-Waals antiferromagnets and it also exhibits a d-d transition originating from the Ni$^{2+}$-ions similar to NiO.
-The paper from Afanasiev et al. \lit{Afanasiev} describing the selective activation of a magnon mode and tuning of its amplitude via pump polarization control.
-As it closely resembles what was measured for NiO in this paper and lies within the scope of what is possible to do with our experimental setup.
-First, an effort was undertaken to reproduce the already established results from that paper.
-Namely, to detect the in-plane magnon mode with a frequency of \qty{0.3}{THz} while pumping at \qty{1.08}{eV} which is shown for different temperatures in \autoref{fig:10}.
+Another interesting compound containing Ni is NiPS3, which belongs to the group of van-der-Waals antiferromagnets.
+Just like in NiO, the magnetism stems from the Ni$^{2+}$-ions.
+It also exhibits a d-d transition centered at \qty{1.1}{eV} originating from the Ni$^{2+}$-ions \lit{Belvin}.
+A paper from Afanasiev et al. \lit{Afanasiev} exists that deals with the magnon dynamics in NiPS3.
+It mainly describes the selective activation of a magnon mode by resonantly pumping the d-d transition with light.
+Furthermore, the pump polarization dependence of the magnon mode is investigated.
+% It shows that it arises from the light-induced magnetic anisotropy resulting from the excitation of the higher-energy states of Ni-ions.
+\autoref{fig:9} depicts the amplitude of the observed magnon mode (pink) as a function of pump photon energy.
+The relatively narrow resonance around the $^3A_{2\text{g}} \rightarrow ^3T_{2\text{g}}$ transition together with the dependence of the amplitude on the pump polarization angle reveals the qualitative origin of the in-plane mode.
+The transition from the $^3A_{2\text{g}}$ ground state to the higher-energy $^3T_{2\text{g}}$ state induces a magnetic anisotropy which generates a suitably short torque impulsively triggering the magnon mode.
 \begin{figure}[ht]
     \centering
     \begin{subfigure}[b]{0.5\textwidth}
@@ -222,11 +229,11 @@ Namely, to detect the in-plane magnon mode with a frequency of \qty{0.3}{THz} wh
         \caption{}
         \label{fig:10}
     \end{subfigure}
-    \caption{\textbf{a)} The spectral dependencies of the amplitudes of the in-plane $f_1$ mode and the out-of-plane $f_2$ mode normalized to the maximum value of the $f_1$ mode. The solid lines are guides to the eye. \textbf{b)} The time-resolved rotation of polarization after pumping with an energy of \qty{1.08}{eV} at different temperatures. Taken from \lit{Afanasiev et al.}}
+    \caption{\textbf{a)} The spectral dependencies of the amplitudes of the in-plane $f_1$ mode and the out-of-plane $f_2$ mode normalized to the maximum value of the $f_1$ mode. The solid lines are guides to the eye. \textbf{b)} The time-resolved rotation of polarization after pumping with an energy of \qty{1.08}{eV} at different temperatures. Both taken from \lit{Afanasiev et al.}}
 \end{figure}
 \FloatBarrier
-The relatively narrow resonance around the $^3A_{2\text{g}} \rightarrow ^3T_{2\text{g}}$ seen in \autoref{fig:9} together with the dependence of the amplitude on the pump polarization the reveals the qualitative origin of the in-plane mode.
-The transition to the $^3T_{2\text{g}}$ state induces a magnetic anisotropy which generates a suitably short torque impulsively triggering the magnon mode.
+First, an effort was undertaken to reproduce one of the already established results from that paper.
+Namely, to detect the in-plane magnon mode with a frequency of \qty{0.3}{THz} while pumping at \qty{1.08}{eV} and probing at \qty{800}{nm} which is shown for different temperatures in \autoref{fig:10}.
 \begin{figure}[ht]
     \centering
     \includegraphics{pictures/plots/NiPS3_no_magnons.pdf} \vspace{-0.3cm}
@@ -239,138 +246,139 @@ There are no oscillations visible.
 The measurements were done at different polarization directions for the pump and the probe pulse and at varying fluences, but still no fluctuations appeared.
 In contrast to \lit{Afanasiev, Toyoda} the measurements were not taken in transmission but in reflection.
 Subsequent measurements using a magnetic field of up to \qty{2}{T}, to cant the spins more into the direction of the c-axis for an easier detection, show slight oscillations which only start after about \qty{30}{ps}.
-It is entirely possible, that the in-plane mode is first masked by the thermal demagnetization and then by the dominant GHz-modes decribed in the following.
+It is possible, that the in-plane mode is first masked by the thermal demagnetization and then by the dominant GHz-modes decribed in the following.
 
-Observing a longer timescale of around \qty{300}{ps} with the probe set to \qty{800}{nm} reveals two GHz-modes with the frequencies 13 and \qty{28}{GHz} which are labeled low-frequency (lf) and high-frequency (hf) mode, analogous to the two modes in NiO.
+Observing a longer timescale of around \qty{300}{ps} with the probe set to \qty{800}{nm} reveals two GHz-modes with the frequencies 13 and \qty{28}{GHz} which are labeled low-frequency (LFM) and high-frequency (LFM) mode, analogous to the two modes in NiO.
 These modes are not yet described in literature.
-Instead of fitting the oscillations the easier method of FFT was used as the phase does not seem to change in the evaluated dependencies and only the amplitude and frequency are of importance to us.
+Instead of fitting the oscillations, the easier method of FFT was used as the phase does not seem to change in the evaluated dependencies and only the amplitude and frequency are of importance to us.
 It should be noted that the frequencies do not change from their values during the three measured dependencies and are therefore omitted from the following sections.
 
 \subsection{Pump polarization dependence}
-To help us understand the excitation mechanism behind the GHz-modes a pump polarization dependence is done.
-For this purpose the rotation of polarization and the transient reflection was analyzed while changing the angle from 0° to 180° with a stepsize of 15°.
+To help us understand the excitation mechanism behind the GHz-modes a pump polarization dependence is carried out.
+For this purpose the rotation of polarization and the transient reflectivity was analyzed while changing the angle from 0° to 180° with a stepsize of 15°.
 The probe polarization angle was set to 150° for the duration of this dependence.
-Employing a FFT the amplitude along with the frequency of the detected oscillation are extracted.
+Employing an FFT the amplitude along with the frequency of the detected oscillation are extracted.
 A beating of two different oscillations is clearly visible in \autoref{fig:NiPS3_pump_polarization_dependence_diff}.
 \begin{figure}[hbt!]
     \centering
     \includegraphics{pictures/plots/NiPS3_pump_polarization_dependence_diff.pdf} \vspace{-0.3cm}
-    \caption{The rotation of polarization as a function of time taken at pump polarization angles ranging from 0° to 180° with a stepsize of 15° is shown. The red lines depict the linear background.}
+    \caption{\textbf{a)} Rotation of polarization as a function of time taken at pump polarization angles ranging from 0° to 180° with a stepsize of 15°. The red lines depict the linear background. \textbf{b)} The FFTs of the traces at the different pump polarization angles display two prominent modes at \qty{13}{GHz} (LFM) and \qty{28}{GHz} (HFM).}
     \label{fig:NiPS3_pump_polarization_dependence_diff}
-\end{figure}
-\FloatBarrier
-\begin{figure}[hbt!]
-    \centering
-    \includegraphics{pictures/plots/NiPS3_pump_polarization_dependence_diff_FFT.pdf} \vspace{-0.3cm}
-    \caption{The FFTs of the traces at the different pump polarization angles display two prominent modes at \qty{13}{GHz} (LFM) and \qty{28}{GHz} (HFM).}
-    \label{fig:NiPS3_pump_polarization_dependence_diff_FFT}
 \end{figure}
 \FloatBarrier
 \begin{figure}[hbt!]
     \centering  
     \includegraphics{pictures/plots/NiPS3_pump_polarization_dependence_diff_ampl.pdf} \vspace{-0.3cm}
-    \caption{The exctracted amplitudes of the lf- and hf-mode plotted against the pump polarization angle the respective data traces were taken at. The continuous lines show the sinusoidal fit which yields a 3-fold symmetry.}
+    \caption{The extracted amplitudes of the lf- and hf-mode in the rotation of polarization plotted against the pump polarization angle and normalized to the maximum value. The data traces were taken at a probe polarization of 150°. The continuous lines show the sinusoidal fit which yields a 3-fold symmetry.}
     \label{fig:NiPS3_pump_polarization_dependence_diff_ampl}
 \end{figure}
 \FloatBarrier
-Considering the dependence in \autoref{fig:NiPS3_pump_polarization_dependence_diff_ampl} a clear sinusoidal shape with a period of 60° be seen.
+Considering the dependence in \autoref{fig:NiPS3_pump_polarization_dependence_diff_ampl}, a clear sinusoidal shape with a period of 60° be seen.
 It is hard to determine to what crystallographic directions the angles of the orientation of polarization correspond to, as no literature on these modes is available yet, their origin is ambiguous and no dependencies of known features were done to identify the orientation of the sample in relation to our setup.
-Nonetheless, the 3-fold symmetry of both modes is recognizable which indicates their origin to be associated with the 2d-lattice of the Ni$^{2+}$-ions as the honeycomb structure has the same symmetry.
-The transient reflection in \autoref{fig:NiPS3_pump_polarization_dependence_sum} shows only one distinct mode, the hf-mode, as do all following transient reflection measurements.
-As the transient reflectivity is regarded as a measure for non-magnetic dynamics this is indicative that the hf-mode emerges from lattice dynamics.
-Furthermore, the same periodicity in the pump polarization dependecies for $\Delta \theta$ and $\Delta R / R$ suggests that both the modes have a common origin.
+Nonetheless, the 3-fold symmetry of both modes is recognizable which indicates their origin to be associated with the 2D-lattice of the Ni$^{2+}$-ions as the honeycomb structure has the same symmetry.
+
+The transient reflectivity in \autoref{fig:NiPS3_pump_polarization_dependence_sum} shows only one distinct mode, the hf-mode, as do all following transient reflectivity measurements.
+As the transient reflectivity is regarded as a measure for non-magnetic dynamics this indicates that the hf-mode emerges from lattice dynamics.
+The amplitude of the hf-mode in the transient reflectivity in \autoref{fig:NiPS3_pump_polarization_dependence_sum_ampl} also displays a 3-fold symmetry in regard to the pump polarization.
+Furthermore, the same periodicities in the pump polarization dependencies for the rotation of polarization and transient reflectivity suggest that both the modes have a common origin.
 Both polarization dependencies show some data points deviating from the sinusoidal shape in the region of 140°, implying some issues arising from the setup.
+A possible explanation could be that the $\frac{\lambda}{2}$-plate used to adjust the polarization angle has a faulty spot.
+As the pump does not hit the waveplate exactly in the middle, a change of angle would change the spot where the pump meets plate.
 Aside from that, the other points fit into the shape quite well.
 \begin{figure}[hbt!]
     \centering
     \includegraphics{pictures/plots/NiPS3_pump_polarization_dependence_sum.pdf} \vspace{-0.3cm}
-    \caption{\textbf{a)} The transient reflection as a function of time taken at pump polarization angles ranging from 0° to 180° with a stepsize of 15° is shown. The red lines depict the linear background. \textbf{b)} The FFTs of the traces at the different pump polarization angles display one prominent mode at \qty{28}{GHz}.}
+    \caption{\textbf{a)} Transient reflectivity as a function of time taken at pump polarization angles ranging from 0° to 180° with a stepsize of 15°. The red lines depict the linear background. \textbf{b)} The FFTs of the traces at the different pump polarization angles display one prominent mode at \qty{28}{GHz}.}
     \label{fig:NiPS3_pump_polarization_dependence_sum}
 \end{figure}
 % \FloatBarrier
 \begin{figure}[hbt!]
     \centering  
     \includegraphics{pictures/plots/NiPS3_pump_polarization_dependence_sum_ampl.pdf} \vspace{-0.3cm}
-    \caption{The exctracted amplitudes of the hf-mode plotted against the pump polarization angle the respective data traces were taken at. The continuous line shows the sinusoidal fit which yields a 3-fold symmetry.}
+    \caption{The extracted amplitudes of the hf-mode in the transient reflectivity plotted against the pump polarization angle and normalized to the maximum value. The data traces were taken at a probe polarization of 150°. The continuous line shows the sinusoidal fit which yields a 3-fold symmetry.}
     \label{fig:NiPS3_pump_polarization_dependence_sum_ampl}
 \end{figure}
 \FloatBarrier
 
 \newpage
 \subsection{Probe polarization dependence}
+The probe polarization dependence analyzed in this chapter makes a statement about the detection mechanism behind the oscillations we observe in the rotation of polarization seen in \autoref{fig:NiPS3_probe_polarization_dependence_diff}a.
 For the following measurements the pump polarization angle was set to 180° and the probe polarization angle was varied from 0° to 180° with a stepsize of 15°.
-The probe polarization dependence makes a statement about the detection mechanism behind the oscillations we observe in the rotation of polarization shown in \autoref{fig:NiPS3_probe_polarization_dependence_diff}.
-Two such inverse MOKE effects come into question.
-The inverse Faraday effect which originates from a possible out-of-plane magnetization component and the inverse Cotton-Mouton effect originating from an in-plane component of the Neél vector causing linear birefringence.
+As for the detection mechanism two magneto-optical effects come into question:
+The magneto-optical Kerr effect (MOKE) which originates from a possible out-of-plane magnetization component and the Cotton-Mouton effect originating from an in-plane component of the Neél vector causing linear birefringence.
 The Faraday effect does not depend on the polarization angle of the probe \lit{Toyoda}.
-Taking the angle dependence in \autoref{fig:NiPS3_probe_polarization_dependence_diff_ampl} into account a conclusion can be drawn that the observed signal stems from linear birefringence, as theory also suggests that such a 2-fold symmetry corresponds to linear birefringence.
+Using the same procedure as for the pump polarization dependence, the amplitudes of the oscillations in \autoref{fig:NiPS3_probe_polarization_dependence_diff} are extracted via FFT.
+\autoref{fig:NiPS3_probe_polarization_dependence_diff_ampl} portrays the amplitudes of both the lf- and hf-mode as a function of the probe polarization angle.
+The continous lines display sinusoidal fits.
+Taking the angle dependence in \autoref{fig:NiPS3_probe_polarization_dependence_diff_ampl} into account, the conclusion can be drawn that the observed signal stems from linear birefringence, as theory also suggests that such a 2-fold symmetry corresponds to linear birefringence \lit{Satoh}.
 It is also visible that the amplitude completely vanishes at the minima of the sinusoidal curve.
 \begin{figure}[hbt!]
     \centering
     \includegraphics{pictures/plots/NiPS3_probe_polarization_dependence_diff.pdf} \vspace{-0.3cm}
-    \caption{\textbf{a)} The rotation of polarization as a function of time taken at probe polarization angles ranging from 0° to 180° with a stepsize of 15° is shown. The red lines depict the linear background. \textbf{b)} The FFTs of the traces at the different probe polarization angles display two prominent modes at \qty{13}{GHz} (LFM) and \qty{28}{GHz} (HFM).}
+    \caption{\textbf{a)} Rotation of polarization as a function of time taken at probe polarization angles ranging from 0° to 180° with a stepsize of 15°. The red lines depict the linear background. \textbf{b)} The FFTs of the traces at the different probe polarization angles display two prominent modes at \qty{13}{GHz} and \qty{28}{GHz}.}
     \label{fig:NiPS3_probe_polarization_dependence_diff}
 \end{figure}
 % \FloatBarrier
 \begin{figure}[hbt!]
     \centering  
     \includegraphics{pictures/plots/NiPS3_probe_polarization_dependence_diff_ampl.pdf} \vspace{-0.3cm}
-    \caption{The exctracted amplitudes of the lf- and hf-mode plotted against the probe polarization angle the respective data traces were taken at. The continuous lines show the sinusoidal fit which yields a 2-fold symmetry.}
+    \caption{The extracted amplitudes of the lf- and hf-mode in the rotation of polarization plotted against the probe polarization angle and normalized to the maximum value. The data traces were taken at a pump polarization of 180°. The continuous lines show the sinusoidal fit which yields a 2-fold symmetry.}
     \label{fig:NiPS3_probe_polarization_dependence_diff_ampl}
 \end{figure}
 \FloatBarrier
-\newpage
-The probe polarization dependence of the transient reflectivity displays the same periodicity as the rotation of polarization.
-
+\autoref{fig:NiPS3_probe_polarization_dependence_diff} shows the measured transient reflectivity for the different probe polarization angles together with the respective FFT which again only yields the hf-mode.
+The probe polarization dependence of the transient reflectivity plotted in \autoref{fig:NiPS3_probe_polarization_dependence_sum_ampl} displays the same periodicity as the rotation of polarization.
 \begin{figure}[hbt!]
     \centering
     \includegraphics{pictures/plots/NiPS3_probe_polarization_dependence_sum.pdf} \vspace{-0.3cm}
-    \caption{\textbf{a)} The transient reflection as a function of time taken at probe polarization angles ranging from 0° to 180° with a stepsize of 15° is shown. The red lines depict the quadratic background. \textbf{b)} The FFTs of the traces at the different probe polarization angles display one prominent mode at \qty{28}{GHz}.}
+    \caption{\textbf{a)} Transient reflectivity as a function of time taken at probe polarization angles ranging from 0° to 180° with a stepsize of 15°. The red lines depict the quadratic background. \textbf{b)} The FFTs of the traces at the different probe polarization angles display one prominent mode at \qty{28}{GHz}.}
     \label{fig:NiPS3_probe_polarization_dependence_sum}
 \end{figure}
 % \FloatBarrier
 \begin{figure}[hbt!]
     \centering  
     \includegraphics{pictures/plots/NiPS3_probe_polarization_dependence_sum_ampl.pdf} \vspace{-0.3cm}
-    \caption{The exctracted amplitudes of the hf-mode plotted against the probe polarization angle the respective data traces were taken at. The continuous line shows the sinusoidal fit which yields a 2-fold symmetry.}
+    \caption{The extracted amplitudes of the hf-mode in the transient reflectivity plotted against the probe polarization angle and normalized to the maximum value. The data traces were taken at a pump polarization of 180°. The continuous line shows the sinusoidal fit which yields a 2-fold symmetry.}
     \label{fig:NiPS3_probe_polarization_dependence_sum_ampl}
 \end{figure}
 \FloatBarrier
 
-\subsection{Temperature polarization dependence}
-The temperature dependence was measured to be able to decicively determine whether the two modes are of magnetic or non-magnetic origin.
-The pump and probe polarizations were set to 180° and 150° and the temperature was varied from 77 to \qty{170}{K} with a stepsize of \qty{10}{K} except around the Neél temperature, where the stepsize was reduced to \qty{5}{K}.
+\subsection{Temperature dependence}
+The temperature dependence was measured to be able to determine whether the two modes are of magnetic or non-magnetic origin.
+The pump and probe polarizations were set to 180° and 150°, as this combination of angles yielded the smoothest oscillations.
+The temperature was varied from 77 to \qty{170}{K} with a stepsize of \qty{10}{K} except around the Neél temperature (\qty{155}{K}), where the stepsize was reduced to \qty{5}{K}.
 What we see now in \autoref{fig:NiPS3_temp_dependence_diff} is that both modes completely vanish above a certain temperature.
-For the lf-mode this temperature coincides with the Neél temperature, which proves an irrefutable connection to the magnetic system.
+For the lf-mode this temperature coincides with the Neél temperature, which proves a connection to the magnetic system.
 For the hf-mode whose detected amplitude is always smaller than the one from the lf-mode, any noticeable amplitude value vanishes after around \qty{120}{K}.
 \begin{figure}[hbt!]
     \centering
     \includegraphics{pictures/plots/NiPS3_temp_dependence_diff.pdf} \vspace{-0.3cm}
-    \caption{\textbf{a)} The rotation of polarization as a function of time taken at temperatures ranging from 77 to \qty{170}{K} with an approximate stepsize of \qty{10}{K} is shown. The red lines depict the linear background. \textbf{b)} The FFTs of the traces at the different temperatures display two prominent modes at \qty{13}{GHz} (LFM) and \qty{28}{GHz} (HFM) which both vanish at a specific temperature.}
+    \caption{\textbf{a)} Rotation of polarization as a function of time acquired at temperatures ranging from 77 to \qty{170}{K} with an approximate stepsize of \qty{10}{K}. The blue lines depict the linear background. \textbf{b)} The FFTs of the traces at the different temperatures display two prominent modes at \qty{13}{GHz} and \qty{28}{GHz} which both vanish at two distinct temperatures.}
     \label{fig:NiPS3_temp_dependence_diff}
 \end{figure}
 % \FloatBarrier
 \begin{figure}[hbt!]
     \centering  
     \includegraphics{pictures/plots/NiPS3_temp_dependence_diff_ampl.pdf} \vspace{-0.3cm}
-    \caption{The exctracted amplitudes of the lf-mode plotted against the temperatures the respective data traces were taken at. A vanishing of the amplitudes after the Neél temperature is observed.}
+    \caption{The exctracted amplitudes of the lf-mode in the rotation of polarization plotted against the temperatures, the respective data traces were taken at. A vanishing of the amplitudes after the Neél temperature is observed.}
     \label{fig:NiPS3_temp_dependence_diff_ampl}
 \end{figure}
 \FloatBarrier
-As the transient reflection reflects the non-magnetic dynamics, the amplitudes are not expected to be temperature dependent.
+As the transient reflectivity reflects the lattice dynamics, the amplitudes are not expected to be temperature dependent.
 This is supported by the amplitude values of the hf-mode in \autoref{fig:NiPS3_temp_dependence_sum_ampl} being random, not following any trend and persisting even after the Neél temperature.
-It can be concluded that the hf-mode originates in the lattice and coupling to the magnetic system induces dynamics which scale with the magnetic order.
+It can be concluded that the hf-mode originates in the lattice.
+It couples to the magnetic system and induces dynamics which scale with the magnetic order.
 \begin{figure}[hbt!]
     \centering
     \includegraphics{pictures/plots/NiPS3_temp_dependence_sum.pdf} \vspace{-0.3cm}
-    \caption{\textbf{a)} The transient reflection as a function of time taken at temperatures ranging from 77 to \qty{170}{K} with an approximate stepsize of \qty{10}{K} is shown. The red lines depict the linear background. \textbf{b)} The FFTs of the traces at the different temperatures display one prominent mode at \qty{28}{GHz}.}
+    \caption{\textbf{a)} Transient reflectivity as a function of time acquired at temperatures ranging from 77 to \qty{170}{K} with an approximate stepsize of \qty{10}{K}. The blue lines depict the linear background. \textbf{b)} The FFTs of the traces at the different temperatures display one prominent mode at \qty{28}{GHz}.}
     \label{fig:NiPS3_temp_dependence_sum}
 \end{figure}
 % \FloatBarrier
 \begin{figure}[hbt!]
     \centering  
     \includegraphics{pictures/plots/NiPS3_temp_dependence_sum_ampl.pdf} \vspace{-0.3cm}
-    \caption{The exctracted amplitudes of the hf-mode plotted against the temperature the respective data traces were taken at. There is no clear trend visible.}
+    \caption{The exctracted amplitudes of the hf-mode in the transient reflectivity plotted against the temperatures, the respective data traces were taken at. There is no clear trend visible.}
     \label{fig:NiPS3_temp_dependence_sum_ampl}
 \end{figure}
 \FloatBarrier
