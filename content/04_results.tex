@@ -6,7 +6,7 @@ In \autoref{fig:example_analysis_fit}b we use a suitable dataset of rotation of 
 \begin{figure}[ht]
     \centering
     \includegraphics{pictures/plots/example_analysis_fit.pdf}
-    \caption{\textbf{a)} An example trace analyzed using the fitting functions \autoref{eqn:fit_hf} and \autoref{eqn:fit_lf}. \textbf{b)} After subtracting a linear background an FFT was applied, producing this plot.}
+    \caption{\textbf{(a)} An example trace analyzed using the fitting functions \autoref{eqn:fit_hf} and \autoref{eqn:fit_lf}. \textbf{(b)} After subtracting a linear background an FFT was applied, producing this plot.}
     \label{fig:example_analysis_fit}
 \end{figure}
 \FloatBarrier
@@ -44,7 +44,7 @@ The FFT method is used for the measurements of NiPS3, since no decay of the osci
 
 \section{NiO/C60}
 \subsection{Absorption measurements on NiO/C60}
-As described in ....., NiO is as a prototypical antiferromagnet which was already a subject of much research effort.
+As described in \lit{Rezende}, NiO is as a prototypical antiferromagnet which was already a subject of much research effort.
 In this thesis we focus on the changes we can detect in the magnetic behavior by covering the NiO with a molecular layer.
 To try this, C60 was used in part because it is widely available, but mainly because of its strong interaction with ferromagnetic surfaces \lit{Veenstra}.
 % C60 is a molecule which is
@@ -98,7 +98,7 @@ The values for the lf-mode also stay about the same throughout the different pum
 \end{figure}
 \FloatBarrier
 In contrast to the WL dependence of the frequency the change in amplitude for different pump wavelengths is much more obvious and can already clearly be seen in \autoref{fig:NiO_pump_WL_dependence}.
-Following the same procedure as for the frequencies, in \autoref{fig:NiO_pump_WL_dependence_ampl} the spectral dependence of the amplitudes of the two magnon modes is displayed in dark orange and dark blue.
+Following the same procedure as for the frequencies, the spectral dependence of the amplitudes of the two magnon modes is displayed in \autoref{fig:NiO_pump_WL_dependence_ampl}, in dark orange for the lf-mode and in dark blue for the hf-mode.
 \begin{figure}[ht]
     \centering
     \includegraphics{pictures/plots/NiO_pump_WL_dependence_freq.pdf}
@@ -112,37 +112,39 @@ Following the same procedure as for the frequencies, in \autoref{fig:NiO_pump_WL
     \label{fig:NiO_pump_WL_dependence_ampl}
 \end{figure}
 \FloatBarrier
-Comparing it to the absorption spectra a clear broadening of the resonance can be seen, as the ultrashort laser pulses have a pulse duration of \qty{75}{fs} and thus a finite bandwidth of about \qty{40}{meV}.
-Under the assumption that the spectral shape of the laser pulses is gaussian the position maxima of the spectral dependencies should not change.
-Here, a comparison between the data taken on the \qty{15}{nm} thick NiO crystal with and without adsorbed C60 molecules is done.
-The pale colored curves in the background show the data on pure NiO and the ones in deeper colors show the measurements done on the NiO/C60 system.
+In the following, the data taken on the NiO/C60 sample is described to then later compare it to the data on pure NiO which is displayed in the background in paler colors.
+% In the following, a comparison between the data taken on the \qty{15}{nm}-thick NiO crystal with and without adsorbed C60 molecules is done.
+% The pale colored curves in the background show the data on pure NiO and the ones in deeper colors show the measurements done on the NiO/C60 system.
 It should be noted here, that the measurements on the pure NiO were done previously within the scope of preliminary measurements.
-On the basis of the absorption spectrum as seen in \autoref{fig:7}, different areas can be identified in the spectral dependencies.
-The range of non-resonant pumping before exciting the X-M peak up to about \qty{0.95}{eV} shows nearly no amplitude for both magnon modes.
-Albeit, in contrast to the hf-mode the lf-mode demonstrates a slightly higher value which is explained in terms of Impulsive Stimulated Raman Scattering (ISRS) \lit{C. Tzschaschel} meaning that slightly off-resonant excitation is also possible.
-ISRS is thought of as an effective magnetic field exerting maximum torque on spins lying perpendicular to it, so that the contributions from different T-domains do not cancel out eachother \lit{2 Kirilyuk}.
-Next, the energy range 0.95-\qty{0.99}{eV} is described.
-Representing the area where the pump energy covers the X-M peak at around \qty{0.97}{eV}, with a tolerance of half of the pulse bandwidth, it features a prominent amplification of both modes.
+% On the basis of the absorption spectrum as seen in \autoref{fig:7_results}, different areas can be identified in the spectral dependencies.
+The two regions up until \qty{0.97}{eV} and from \qty{1.06}{eV} onwards show a negligible amplitude value for both magnon modes.
+This stands in contrast to previous measurements conducted by Bossini et al. and described in \autoref{sec:mode_coupling}.
+They imply an ISRS excitation of the lf-mode in these regions.
+The reason for this discrepancy could be that as we measure in reflection to be surface sensitive, as opposed to transmission, the amount of domains being probed is smaller.
+Thus, we assume that the modes excited through ISRS do not add up as much and do not have a significant enough impact to rise above our detection limit. \\
+% The range of non-resonant pumping before exciting the X-M peak up to until \qty{0.95}{eV} shows nearly no amplitude for both magnon modes.
+% Albeit, in contrast to the hf-mode the lf-mode demonstrates a slightly higher value which is explained in terms of Impulsive Stimulated Raman Scattering (ISRS) \lit{C. Tzschaschel} meaning that slightly off-resonant excitation is also possible.
+% ISRS is thought of as an effective magnetic field exerting maximum torque on spins lying perpendicular to it, so that the contributions from different T-domains do not cancel out eachother \lit{2 Kirilyuk}.
+Next, the energy range 0.97-\qty{1.01}{eV} is described.
+Representing the area where the pump energy covers the X-M peak at around \qty{0.97}{eV},
+% with a tolerance of half of the pulse bandwidth,
+it features a prominent amplification of both modes.
 The coherent amplification of the hf-mode is easy to understand as the pump induces the X-M transition previously explained in \autoref{sec:x_m}.
-\begin{figure}[ht]
-    \centering
-    \includegraphics[width=0.5\textwidth]{pictures/7.png}
-    \caption{The spectral dependence of the magnon modes in a \qty{100}{micrometer} thick NiO crystal measured in transmission. The dependecies are normalized to their highest values. Taken from \lit{Bossini et al.}}
-    \label{fig:7}
-\end{figure}
-\FloatBarrier
 What is surprising here, is the simultaneous amplification of the lf-mode in the same region, although it does not participate in the X-M transition.
-The source of this behaviour is the multidomain state of the NiO sample yielding a coupling between the two modes mediated by the oscillating domain wall motion as explained in \autoref{sec:mode_coupling}.
-The third region of the spectral dependencies exhibits a smaller peak at about \qty{1.03}{eV}.
-This is due to the presence of phonon sidebands PS1 and PS2 belonging to the exciton peak which, when pumped, induces the X-M transition \lit{Bossini}.
+The source of this behaviour is the multidomain state of the NiO sample yielding a coupling between the two modes mediated by the oscillating domain wall motion as explained in \autoref{sec:mode_coupling}. \\
+The third region of the spectral dependence exhibits a smaller peak at about \qty{1.03}{eV}.
+This is due to the presence of phonon sidebands belonging to the exciton peak which, when pumped, induce the X-M transition \lit{Bossini}.
+% This is due to the presence of phonon sidebands PS1 and PS2 belonging to the exciton peak which, when pumped, induce the X-M transition \lit{Bossini}.
 The phonon sidebands also represent a new absorption channel for the pump light, the consequences of that being a smaller amplification as some of the pump power is absorbed by the lattice.
-Finally, in the fourth region the amplitude of both modes sinks down to a negligible value again.
+Comparing the features of the spectral dependence to the absorption spectra in \autoref{fig:NiO_absorption_nm} a clear broadening can be seen, as the ultrashort laser pulses have a pulse duration of \qty{75}{fs} and thus a finite bandwidth of about \qty{40}{meV}.
+Under the assumption that the spectral shape of the laser pulses is gaussian the position maxima of the spectral dependencies should not change.
+% Finally, in the fourth region the amplitude of both modes sinks down to a negligible value again.
 
-The amplitudes of the modes on the NiO/C60 sample follow roughly the same trend.
-The most apparent difference appears to be a slight shift of the amplification peak of 10-\qty{20}{meV} to higher energies.
+The amplitudes of the modes on the pure NiO sample follow roughly the same trend.
+The most apparent difference appears to be a slight shift of the amplification peak of 10-\qty{20}{meV} to higher energies in NiO/C60.
 Seemingly, the molecule coverage also narrows down the amplification resulting in a more distinct peak.
 Furthermore, the height of the phonon sideband induced amplification around \qty{1.03}{eV} relative to the resonant amplification at the X-M peak is reduced.
-This reinforces the impression of it being sharper as well.
+This reinforces the impression of the X-M amplification peak being sharper as well in comparison to the one in pure NiO.
 % Furthermore, a reduction of the height of the phonon sideband induced amplification relative to the resonant amplification at the X-M peak can be observed which would reinforce the impression of it being sharper as well.
 
 \begin{figure}[ht]
@@ -151,7 +153,7 @@ This reinforces the impression of it being sharper as well.
     \caption{A comparison between the two measurements at \qty{1278}{nm} pump before measuring the absorption and after, to show the decrease in signal quality.}
     \label{fig:NiO_pump_1278nm_comparison}
 \end{figure}
-In order to get more points around the amplification peak, another set of measurements was done after the absorption measurements in this second region.
+In order to get more data points around the amplification peak, another set of measurements was done in this second region after the absorption measurements.
 Now, a stepsize of \qty{0.1}{eV} in the energy range of 0.95 to \qty{1.02}{eV} was choosen for the pump, doubling the resolution of the spectral dependence.
 A tremendeous decrease in signal quality, compared to the measurements before, can be seen.
 The hf-oscillation are still easily discernible, but a noticeable reduction of their quality took place.
@@ -170,7 +172,7 @@ The same procedure as before was applied to analyze the data in \autoref{fig:NiO
 As is clearly visible, the amplitude of the lf-mode is reduced to a vanishing value.
 This means that the reliability of the fits of the lf-mode is diminished, as a slight variation of the less important fit parameters results in a substantial change in the two most significant fit parameters, the amplitude and to a lesser extent, the frequency.
 The hf-mode on the other hand, except the \qty{1305}{nm}-pump trace, allows for a precise fit and a more reliable interpretation.
-The amplification peak still looks sharper than in the NiO sample showing a clear change caused by the adsorbed C60 molecules.
+The amplification peak centered at \qty{0.99}{eV} remains at the same position still looks sharper than for the pure NiO sample showing a clear change caused by the adsorbed C60 molecules.
 \begin{figure}[ht]
     \centering
     \includegraphics{pictures/plots/NiO_pump_WL_dependence_ampl_2.pdf}
@@ -231,7 +233,7 @@ The transition from the $^3A_{2\text{g}}$ ground state to the higher-energy $^3T
         \caption{}
         \label{fig:10}
     \end{subfigure}
-    \caption{\textbf{a)} The spectral dependencies of the amplitudes of the in-plane $f_1$ mode and the out-of-plane $f_2$ mode normalized to the maximum value of the $f_1$ mode. The solid lines are guides to the eye. \textbf{b)} The time-resolved rotation of polarization after pumping with an energy of \qty{1.08}{eV} at different temperatures. Both taken from \lit{Afanasiev et al.}}
+    \caption{\textbf{(a)} The spectral dependencies of the amplitudes of the in-plane $f_1$ mode and the out-of-plane $f_2$ mode normalized to the maximum value of the $f_1$ mode. The solid lines are guides to the eye. \textbf{(b)} The time-resolved rotation of polarization after pumping with an energy of \qty{1.08}{eV} at different temperatures. Both taken from \lit{Afanasiev et al.}}
 \end{figure}
 \FloatBarrier
 First, an effort was undertaken to reproduce one of the already established results from that paper.
@@ -264,7 +266,7 @@ A beating of two different oscillations is clearly visible in \autoref{fig:NiPS3
 \begin{figure}[hbt!]
     \centering
     \includegraphics{pictures/plots/NiPS3_pump_polarization_dependence_diff.pdf} \vspace{-0.3cm}
-    \caption{\textbf{a)} Rotation of polarization as a function of time taken at pump polarization angles ranging from 0° to 180° with a stepsize of 15°. The red lines depict the linear background. \textbf{b)} The FFTs of the traces at the different pump polarization angles display two prominent modes at \qty{13}{GHz} (LFM) and \qty{28}{GHz} (HFM).}
+    \caption{\textbf{(a)} Rotation of polarization as a function of time taken at pump polarization angles ranging from 0° to 180° with a stepsize of 15°. The red lines depict the linear background. \textbf{(b)} The FFTs of the traces at the different pump polarization angles display two prominent modes at \qty{13}{GHz} (LFM) and \qty{28}{GHz} (HFM).}
     \label{fig:NiPS3_pump_polarization_dependence_diff}
 \end{figure}
 \FloatBarrier
@@ -290,7 +292,7 @@ Aside from that, the other points fit into the shape quite well.
 \begin{figure}[hbt!]
     \centering
     \includegraphics{pictures/plots/NiPS3_pump_polarization_dependence_sum.pdf} \vspace{-0.3cm}
-    \caption{\textbf{a)} Transient reflectivity as a function of time taken at pump polarization angles ranging from 0° to 180° with a stepsize of 15°. The red lines depict the linear background. \textbf{b)} The FFTs of the traces at the different pump polarization angles display one prominent mode at \qty{28}{GHz}.}
+    \caption{\textbf{(a)} Transient reflectivity as a function of time taken at pump polarization angles ranging from 0° to 180° with a stepsize of 15°. The red lines depict the linear background. \textbf{(b)} The FFTs of the traces at the different pump polarization angles display one prominent mode at \qty{28}{GHz}.}
     \label{fig:NiPS3_pump_polarization_dependence_sum}
 \end{figure}
 % \FloatBarrier
@@ -317,7 +319,7 @@ It is also visible that the amplitude completely vanishes at the minima of the s
 \begin{figure}[hbt!]
     \centering
     \includegraphics{pictures/plots/NiPS3_probe_polarization_dependence_diff.pdf} \vspace{-0.3cm}
-    \caption{\textbf{a)} Rotation of polarization as a function of time taken at probe polarization angles ranging from 0° to 180° with a stepsize of 15°. The red lines depict the linear background. \textbf{b)} The FFTs of the traces at the different probe polarization angles display two prominent modes at \qty{13}{GHz} and \qty{28}{GHz}.}
+    \caption{\textbf{(a)} Rotation of polarization as a function of time taken at probe polarization angles ranging from 0° to 180° with a stepsize of 15°. The red lines depict the linear background. \textbf{(b)} The FFTs of the traces at the different probe polarization angles display two prominent modes at \qty{13}{GHz} and \qty{28}{GHz}.}
     \label{fig:NiPS3_probe_polarization_dependence_diff}
 \end{figure}
 % \FloatBarrier
@@ -333,7 +335,7 @@ The probe polarization dependence of the transient reflectivity plotted in \auto
 \begin{figure}[hbt!]
     \centering
     \includegraphics{pictures/plots/NiPS3_probe_polarization_dependence_sum.pdf} \vspace{-0.3cm}
-    \caption{\textbf{a)} Transient reflectivity as a function of time taken at probe polarization angles ranging from 0° to 180° with a stepsize of 15°. The red lines depict the quadratic background. \textbf{b)} The FFTs of the traces at the different probe polarization angles display one prominent mode at \qty{28}{GHz}.}
+    \caption{\textbf{(a)} Transient reflectivity as a function of time taken at probe polarization angles ranging from 0° to 180° with a stepsize of 15°. The red lines depict the quadratic background. \textbf{(b)} The FFTs of the traces at the different probe polarization angles display one prominent mode at \qty{28}{GHz}.}
     \label{fig:NiPS3_probe_polarization_dependence_sum}
 \end{figure}
 % \FloatBarrier
@@ -355,7 +357,7 @@ For the hf-mode whose detected amplitude is always smaller than the one from the
 \begin{figure}[hbt!]
     \centering
     \includegraphics{pictures/plots/NiPS3_temp_dependence_diff.pdf} \vspace{-0.3cm}
-    \caption{\textbf{a)} Rotation of polarization as a function of time acquired at temperatures ranging from 77 to \qty{170}{K} with an approximate stepsize of \qty{10}{K}. The blue lines depict the linear background. \textbf{b)} The FFTs of the traces at the different temperatures display two prominent modes at \qty{13}{GHz} and \qty{28}{GHz} which both vanish at two distinct temperatures.}
+    \caption{\textbf{(a)} Rotation of polarization as a function of time acquired at temperatures ranging from 77 to \qty{170}{K} with an approximate stepsize of \qty{10}{K}. The blue lines depict the linear background. \textbf{(b)} The FFTs of the traces at the different temperatures display two prominent modes at \qty{13}{GHz} and \qty{28}{GHz} which both vanish at two distinct temperatures.}
     \label{fig:NiPS3_temp_dependence_diff}
 \end{figure}
 % \FloatBarrier
@@ -373,7 +375,7 @@ It couples to the magnetic system and induces dynamics which scale with the magn
 \begin{figure}[hbt!]
     \centering
     \includegraphics{pictures/plots/NiPS3_temp_dependence_sum.pdf} \vspace{-0.3cm}
-    \caption{\textbf{a)} Transient reflectivity as a function of time acquired at temperatures ranging from 77 to \qty{170}{K} with an approximate stepsize of \qty{10}{K}. The blue lines depict the linear background. \textbf{b)} The FFTs of the traces at the different temperatures display one prominent mode at \qty{28}{GHz}.}
+    \caption{\textbf{(a)} Transient reflectivity as a function of time acquired at temperatures ranging from 77 to \qty{170}{K} with an approximate stepsize of \qty{10}{K}. The blue lines depict the linear background. \textbf{(b)} The FFTs of the traces at the different temperatures display one prominent mode at \qty{28}{GHz}.}
     \label{fig:NiPS3_temp_dependence_sum}
 \end{figure}
 % \FloatBarrier
