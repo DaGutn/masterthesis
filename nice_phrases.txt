@@ -90,3 +90,119 @@ Pumping the d-d transitions, meaning the excitation of the higher orbital states
 
 
 
+
+
+
+
+
+
+
+
+
+In this thesis, pump-probe spectroscopy measurements were carried out on a \qty{15}{\um}-thick NiO crystal with adsorbed C60 molecules as well as on a NiPS3 bulk crystal.
+These Ni-based compounds were chosen because they are both AFM, feature a similar d-d transition and thus exhibit tuning potential.
+The femtosecond laser system used makes it possible to tune the photon energies of both pump and probe beam separately, covering the energy range from \qty{0.5}{eV} to \qty{3.5}{eV}.
+The samples are mounted in a cryostat which allows them to be cooled down to \qty{77}{K}.
+It is also possible to conduct polarization dependent measurements.
+
+First, measurements on NiO/C60 were performed in order to investigate the two magnon modes at 0.13 and \qty{1.07}{THz}.
+The absorption spectra taken on a commercial CARY system exhibit a X-M peak.
+A dependence on the pump wavelength was acquired for NiO/C60 to be able to compare it to the previously measured spectral dependence of pure NiO.
+A fit of the obtained data traces shows no change in the frequency of any of the two magnon modes meaning that the adsorbed C60 does not induce a change in the interfacial magnetic anisotropy.
+On the other hand, a slight shift of the amplification of both magnon modes in the spectral dependence when pumping around the X-M peak could be detected.
+A distinct sharpening of the amplification peak is visible as well.
+From an absorption measurement done on a commercial CARY system some features at \qty{1400}{nm} could be seen in the spectrum NiO/C60, distinguishing it from the spectrum of pure NiO.
+Subsequent measurements at \qty{1400}{nm} report a hitherto unreported mode of \qty{0.62}{THz}.
+
+Concerning NiPS3, we first tried to excite the magnon modes, which were e.g. found by Afanasiev et al., by pumping around \qty{1.1}{eV}.
+Unfortunately these magnons could not be detected.
+However, two modes at 13 and at \qty{28}{GHz} were extracted via FFT of the rotation of polarization which led to a concentration of the research efforts on these modes.
+During all dependencies the frequencies of the two modes stayed the same.
+In the transient reflectivity only the \qty{28}{GHz}-mode could be detected hinting at the fact that the origin of this mode are lattice dynamics.
+To understand the underlying excitation mechanism, a pump polarization dependence was done which yielded a 3-fold symmetry pointing to a connection of the excited mode to the hexagonal structure of the Ni$^{2+}$-ions.
+This dependence was visible in both the rotation of the polarization and the transient reflectivity.
+In an effort to determine the detection mechanism, a probe polarization dependence was measured.
+It revealed a 2-fold symmetry in the rotation of polarization which can be traced back to a linear birefringence or the Cotton-Mouton effect as opposed to the Kerr effect which would not exhibit any dependence on the probe polarization angle.
+The Cotton-Mouton effect appears as a consequence of an in-plane oscillation of the Néel vector.
+This leads to the conclusion that magnetic dynamics are excited in NiPS3.
+A temperature dependence was taken to determine the type of origin of both modes.
+The amplitudes of the \qty{13}{GHz}-oscillations in the rotation of polarization vanish above the Néel temperature of NiPS3 at \qty{155}{K} which suggests a magnetic origin.
+The \qty{28}{GHz}-oscillations in the rotation of polarization vanish at \qty{120}{K}, whereas the behavior of the amplitudes in the transient reflectivity is completely random.
+That the \qty{28}{GHz}-mode persists in the transient reflectivity even after the Néel temperature reinforces the assumption that it emerges from the lattice.
+The mode being visible in the rotation of polarization and vanishing before reaching the Néel temperature indicates that it also has a magnetic component.
+As a conclusion, it can be said that the \qty{28}{GHz}-mode is non-magnetic but couples to the magnetic system.
+
+Although the measurements on NiO/C60 could reproduce the literature and expand on it, they also lead to some open questions.
+The measurements of the \qty{0.62}{THz}-mode were done after the absorption measurements and thus also after the reduction of the sample quality.
+So it could be worthwhile to repeat these measurements on a newly prepared crystal.
+The identification of the \qty{0.62}{THz}-mode in NiO/C60 can be subject of further investigations.
+A magnetic field dependence would be reasonable, as an applied field could align more domains resulting in a stronger signal. \\
+Measuring the magnetic dependence of the two modes found in NiPS3 would contribute to a definitive assignment of the origin of these modes, i.e. whether they are of nature magnetic or not.
+A spectral dependence similar to the one conducted for NiO/C60 could also help in identifying the excitation mechanism of the modes.
+Using this, the connection between the modes and the pumped d-d transition could be examined.
+
+
+
+
+
+
+
+
+
+Since the advent of ultrafast laser technologies understanding and controlling the time evolution of magnetic systems has become an important area of research for development of ultrafast spintronic devices.
+The discovery of the exchange bias effect in 1956 \cite{meiklejohn_new_1957} sparked the first interest in employing antiferromagnets (AFM) for applications, which in turn led to the discovery of the giant magnetoresistance effect in antiferromagnetically coupled layered magnetic systems in 1988 \cite{binasch_enhanced_1989, camley_theory_1989}.
+Direct manipulation of the magnetic order in AFM directly however remained inaccessible, as the magnetic field needed to reorient spins scales with the exchange interaction and thus reaches values around \qty{100}{T} which is much larger than that of ferromagnets (FM) \cite{nemec_antiferromagnetic_2018}.
+In contrast to FM, which have collective spin excitations in the GHz-range, AFM have much higher antiferromagnetic resonance (AFMR) frequencies up to the THz-range.
+Furthermore, AFM posses no external magnetic stray fields, making them particularly practical for usage in scaled-down devices as they do not influence other devices even in extreme proximity.
+At the same time, this is the crux of the difficulties encountered when trying to study the dynamics of the antiferromagnetic order parameter.
+
+It is accepted that the fastest way to influence the magnetization orientation is via spin precession by applying an external magnetic field in the form of ultrashort laser pulses.
+For FM this field has to be applied until the magnetization crosses the potential barrier from one metastable state to another.
+AFM on the other hand exhibit something akin to intertia driven motion which makes it possible to excite precessional motion of the magnetization with stimuli shorter than the duration of overcoming the potential barrier \cite{kimel_inertia-driven_2009}.
+
+Femtosecond lasers are an important tool making research on AFM accessible and addressing the aforementioned issues.
+Even in AFM, an ultrashort laser pulse is capable to perturb the magnetic order and excite the spin system.
+In addition to the excitation, fs- laser pulses allow for an ultrafast detection based on the magneto-optical effects.
+Rotation of polarization or ellipticity is induced by the magnetization which is generated by the spin precession even in compensated AFM\cite{nemec_antiferromagnetic_2018, bossini_femtosecond_2017}.
+By employing a femtosecond laser in pump-probe spectroscopy, it is possible to resolve even the THz frequencies of the AFMR. \\
+Ultrafast excitation and detection of high-frequency AFM magnons would also change the paradigm of optical magnetization control which has been limited to a binary process in the past.
+In the context of data storage that meant that a laser pulse would read or write a magnetic bit either exhibiting a positive or a negative magnetization.
+Later, it was shown that full vectorial control of the magnetization state is possible \cite{kanda_vectorial_2011, satoh_writing_2015}.
+Addressing e.g. the phase and the amplitude of magnon modes independently by ultrashort laser pulses, multiple pieces of information can be stored in a single storage element \cite{nemec_antiferromagnetic_2018}.
+
+In this work we concentrate on the amplification of the magnon amplitude by pumping the d-d transitions in Ni-based antiferromagnetic compounds.
+In this regard, NiO is used as a prototypical antiferromagnet to expand the fundamental understanding of ultrafast spin dynamics in AFM, as it features a high Neél-temperature (in bulk $T_N=\qty{523}{K}$), a well-known AFM order and a high AFMR frequency \lit{Rezende}.
+Despite being known as an AFM for decades, some questions about the properties of NiO remain not fully resolved, like the compatibility of the two- and eight-sublattice model in describing the magnetic-field dependence of AFMR-modes \cite{ohmichi_frequency-domain_2022}. \\
+So far a theoretical description as well as a comprehensive investigation of the interface between organic molecules and antiferromagnetic materials are missing.
+Our work is a preliminary attempt to investigate organic molecule induced modifications in the magnon characteristics, such as frequency and amplitude.
+As organic molecules are extremely versatile their properties can be finely tuned \cite{sanvito_molecular_2011}.
+C60 molecules are known for creating interfacial dipoles \lit{Veenstra} and enhancing the interfacial magnetic anisotropy in FM \lit{Bairagi}.
+AFMR frequencies depend on the magnetic anisotropy \lit{Rezende}.
+So we expect the NiO/C60 interface to have an influence on the magnetic anisotropy of NiO and thus on its AFMR frequencies.
+
+Thin AFMs, scalable down to the nanometer scale with their magnetic properties intact, are promising for spintronic applications.
+Going one step further, magnetic van-der-Waals materials such as transition metal thiophosphates ($M$PS3) are particularly interesting in this context, as they retain their magnetic order down to a few monolayers \lit{Kim}.
+Here, we study NiPS3.
+It was chosen because of its similar electronic structure with respect to NiO, as the orbital angular momentum of its ground state is also quenched by the crystal field \lit{Ogale}.
+Only the higher-energy states remain unquenched.
+Large anisotropy is usually linked to unquenched orbital angular moments \lit{Afanasiev}.
+Moreover, the Mermin-Wagner theorem states that 2D magnetic systems without anisotropy cannot develop magnetic order.
+Thus, the magnetic anisotropy and also the magnetic order in 2D systems originate from the mixing of the groundstate with higher orbital states.
+Pumping the d-d transitions, meaning the excitation of the higher orbital states, represents a direct path to controlling the magnetic anisotropy \cite{afanasiev_controlling_2021}.
+
+Zeitschrift f
+                                           �r Physik
+
+Sehr geehrte Damen und Herren,
+
+Exabase hat ca. eine Stunde vor Ende der Abgabefrist nicht funktioniert und ich konnte meine Masterarbeit nicht abgeben.
+Deshalb schicke ich Ihnen diese  per Email.
+
+Viele Grüße
+David Gutnikov
+
+
+
+Sehr geehrte Frau Uhlenbruck,
+
+

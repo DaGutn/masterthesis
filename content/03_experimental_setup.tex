@@ -9,14 +9,14 @@ In the frame of this thesis most of the measurements are done via pump-probe spe
 Two pulsed laser beams, the pump and the probe, are used to capture time-resolved measurements.
 The pump pulse acts as a perturbation and excites the system causing a change in its ordered structure.
 The probe pulse is used to probe the perturbed system and to extract information about the origin of the change. 
-This translates to a MO effect happening and in turn causing a measurable modification of the probe pulse, such as the rotation of polarization or ellipticity.
+This translates to a MO effect happening and in turn causing a measurable modification of the probe pulse, such as the rotation of polarization or ellipticity as portrayed in \autoref{fig:pump_probe}.
 By shifting the time delay between these two laser pulses it is possible to figuratively scan the response of the system in the time domain.
 A delay line with a minimal stepsize of \qty{75}{nm} in the pump path enables the control of the time delay down to \qty{0.25}{fs}.
 As the pulse has a certain duration itself, the stepsize is limited downward to around \qty{50}{fs} to still make sense of the measurements.
 \begin{figure}[ht]
     \centering
     \includegraphics[width=0.5\textwidth]{pictures/pump_probe.png}
-    \caption{Schematic depiction of transmission pump-probe measurement.}
+    \caption{Schematic depiction of the rotation of polarization in a reflective and in a transmission geometry. Taken from \cite{nemec_antiferromagnetic_2018}.}
     \label{fig:pump_probe}
 \end{figure}
 
@@ -25,7 +25,7 @@ In our setup, a commercial ytterbium-based pulsed femtosecond laser (PHAROS) fro
 With a repetition rate of \qty{50}{kHz} each pulse carries an energy of \qty{100}{\uJ}.
 The Pharos output is split into two beams with a power of \qty{7}{W} and \qty{13}{W} each, of which the first one is designated to be the probe and the second to be the pump beam.
 To ensure a separate wavelength tunability of the two beams, each one is fed into an optical parametric amplifier (ORPHEUS-F) also from Light Conversion, often abbreviated to OPA.
-The OPA consists of a series of non-linear optics mounted on motorized stages, containing e.g. optics for white light generation (WLG) and difference frequency generation (DFG).
+The OPA consists of a series of non-linear optics mounted on motorized stages, containing e.g. optics for white light generation (WLG) and difference frequency generation (DFG) \cite{manzoni_design_2016}.
 The former makes it possible to select a specific signal frequency to amplify via the DFG process.
 \begin{figure}[ht]
     \centering
@@ -58,7 +58,7 @@ It extends the spectrum to twice its size, so that ultimately the energy range f
 As already mentioned above, a delay line is positioned in the pump beam path.
 The pump travels the distance between the mirrors and the delayline four times, which accounts for a factor of $\frac{4}{c}$ between the time delay and the shifted distance.
 So with the delay line being around \qty{32}{cm} long we can scan through a range of \qty{4200}{ps}.
-The laser light is linearly polarized horizontally with respect to the plane of the table [PHAROS manual], so as an attenuator for the high peak power, a $\frac{\lambda}{2}$-waveplate in combination with a linear polarizer cube is used.
+The laser light is linearly polarized horizontally with respect to the plane of the table, so as an attenuator for the high peak power, a $\frac{\lambda}{2}$-waveplate in combination with a linear polarizer cube is used.
 To vary the transmitting intensity the waveplate is rotated.
 Both beams are then focused either by lenses or an objective on a common spot on the sample surface, where a spatial overlap can be optimized by moving the pump with a computer-controlled piezo-driven mirror-holder (Newport).
 % It is possible to use this system in the collinear, pump and probe are parallel, or the transversal, angle between pump and probe, scheme.
@@ -104,8 +104,24 @@ The incident light intensity is proportional to the generated photo current in t
 The balanced photodetector gives out a voltage proportional to the difference between the two photo currents.
 Using this knowledge, \autoref{eqn:balance} and the small angle approximation, as the rotation of polarization is very small, the proportional relation
 \begin{equation}
-    U \propto I_s - I_p = E_s^2 - E_p^2 = E^2 \sin(2\theta) \approx 2 E^2 \theta
+    U \propto I_s - I_p = E_s^2 - E_p^2 = E^2 \sin(2\theta) \approx 2 E^2 \theta 
 \end{equation}
 between the angle $\theta$ and the voltage $U$ can be derived.
 Furthermore, the previously described modulation suppresses the background noise and an operational amplifier is used to electronically amplify the difference signal.
 The signal observed on the computer connected to the photodetector is therefore proportional to the rotation of polarization.
+
+\section{Samples and measurement conditions}
+Two freestanding \qty{15}{\um} thick NiO(111) crystals were used for the NiO related measurements.
+One of which was covered with 15 monolayers of C60 molecules.
+To calibrate the deposition rate of the C60 molecules, C60 was first deposited on a clean Cu(100) surface while employing a quarz crystal microbalance.
+C60 was heated by
+Throughout the deposition the LEED was monitored at certain time intervals.
+The time when the LEED picture was displaying the clearest spots was registered as the time it took to adsorb one monolayer.
+The NiO sample was exposed to the C60 for a period of time 15 times that long.
+Due to being such a thin freestanding crystal both the NiO samples curved which complicated the measurements as even small changes in the sample position had a big impact on the direction of the reflected probe beam.
+The bulk NiPS3 sample was freshly cleaved before being used for the purpose of this thesis.
+
+All pump-probe measurements, except the ones designated for a temperature dependence, were conducted at a temperature of \qty{77}{K} as this is the lowest stable temperature attainable using liquid nitrogen to cool the samples.
+During measurements the the cryostat was being pumped down to a pressure of $5 \cdot 10^{-5}\,$mbar.
+The pump laser fluence was also held constant at \qty{6.8}{mJ/cm}$^2$ to ensure a comparability between the individual acquired pump-probe traces.
+With a laser spot size of \qty{150}{\um} the $\frac{\lambda}{2}$-waveplate in the attenuator was rotated such that the pump power right before hitting the sample was held at \qty{30}{mW}.

@@ -10,10 +10,10 @@ In the following, only the concepts that are relevant for understanding the magn
 The materials considered in this thesis are semiconductors which have no free electrons, so it is possible to only take into account the magnetic moments that stem from localized electrons on isolated magnetic ions.
 Magnetic moments are always related to angular momenta, either the orbital angular momentum or the spin.
 As we study materials containing 3d-transition metals we only take into account the spins.
-This is justified because the transition metal ions carry the magnetism and the crystal field of the surrounding ions quenches their orbital angular momentum \lit{Ogale}. \\
+This is justified because the transition metal ions carry the magnetism and the crystal field of the surrounding ions quenches their orbital angular momentum \cite{ogale_functional_2013}. \\
 The spins couple through the so-called exchange interaction which is purely quantum mechanical in nature and has no classical analogon.
 The corresponding term in the potential energy originates from the indistinguishability of electrons and the electrostatic interaction between them.
-A simple mathematical model describing this coupling is the Heisenberg-model \lit{Heisenberg} with the Hamiltonian
+A simple mathematical model describing this coupling is the Heisenberg-model \cite{heisenberg_zur_1928} with the Hamiltonian
 \begin{equation}
     \hat{H}_{\text{Heis}} = -2 \sum_{\langle i,j \rangle} J_{ij} \vec{S_i} \vec{S_j} \;.
 \end{equation}
@@ -23,7 +23,7 @@ This means that only nearest neighbor atoms take part in the coupling which is r
 Apart from this, there is also another case possible, the ``indirect exchange".
 Here, the exchange coupling is mediated by an ion whose orbital overlaps with the orbitals of both of the magnetic ions.
 
-A distinction can be made between three types of ordered states corresponding to different signs of $J_{ij}$ \lit{Stöhr}.
+A distinction can be made between three types of ordered states corresponding to different signs of $J_{ij}$ \cite{stohr_magnetism_2006}.
 Firstly, there is the ferromagnetic order with $J_{ij}>0$, where all magnetic dipole moments are aligned parallel.
 That entails a macroscopic net magnetization $\vec{M}$ which is defined as the ferromagnetic order parameter.
 In most materials, direct exchange is responsible for ferromagnetic order. \\
@@ -39,13 +39,13 @@ Since the magnetization is easily comprehensible
 %     \vec{M} = \frac{\text{d}\vec{m}}{\text{d} V} \;,
 % \end{equation}
 the order parameter for antiferromagnets is derived from it.
-This parameter is called Néel-vector and is defined as the difference between the respective magnetizations of the two sublattices \lit{Stöhr}
+This parameter is called Néel-vector and is defined as the difference between the respective magnetizations of the two sublattices \cite{stohr_magnetism_2006}
 \begin{equation}
     \vec{n} = \vec{M_1} - \vec{M_2} \;.
 \end{equation}
 The AFM type of order is mostly ascribed to superexchange which happens between ions of equal valency, as is the case in NiO.
 It represents an effective hopping of an electron from one ion to the next via a mediating center ion and is therefore easiest described by the Hubbard model.
-Further information on the Hubbard model can be found in \lit{Hubbard, Streltsov}.
+Further information on the Hubbard model can be found in \cite{hubbard_j_electron_1963}\cite{streltsov_orbital_2017}.
 In summary, it states that the electron spins on each of the two ions have to be antiparallel to eachother due to the Pauli principle resulting in an antiferromagnetic ordering.
 \begin{figure}[ht]
     \centering
@@ -55,7 +55,7 @@ In summary, it states that the electron spins on each of the two ions have to be
 \end{figure}
 \FloatBarrier
 These explanations are only valid up to a certain critical temperature, which is called the Néel temperature for AFM.
-A phase transition to the magnetically unordered, or more precisely the paramagnetic, phase happens by going beneath this transition temperature, where the thermally driven disorder prevails against the long range coupling mechanism between the single magnetic moments.
+A phase transition to the magnetically unordered, or more precisely the paramagnetic phase happens by going beneath this transition temperature, where the thermally driven disorder prevails against the long range coupling mechanism between the single magnetic moments.
 
 
 \section{Magnetic domains}
@@ -65,7 +65,7 @@ This splitting of the magnetic structure into different domains is caused by the
 There are several energy contributions coming into play.
 Only when they balance out eachother, a stable magnetic state of the sample is possible.
 
-Initially, the ferromagnetic domains are explained as the reason behind their existence is commonly known \lit{Tanner}.
+Initially, the ferromagnetic domains are explained as the reason behind their existence is commonly known \cite{tanner_antiferromagnetic_1979}.
 The first and foremost term involved in the forming of domains is the field energy $E_{\text{f}}$ stored in form of the magnetostatic field around the sample.
 A large domain also generates a large magnetic field as the field energy scales with the square of the domain size.
 Therefore, to reduce the field energy the material is split into domains of ever smaller size.
@@ -73,14 +73,14 @@ But this shrinking of the domain sizes does not go on indefinetely.
 One of the opposing energy terms is the domain wall energy $E_{\text{D}}$ which scales with the root of the domain size.
 At the boundries between different domains, which are called domain walls, neighbouring magnetic moments are forced to point in opposite directions.
 This goes against the exchange interaction trying to align the magnetic moments in the same direction and there is an energy cost associated with it.
-So the domain size is mostly determined by the balance of the field energy saved by domain splitting and the energy cost of additional domain walls \lit{Cullity}.
+So the domain size is mostly determined by the balance of the field energy saved by domain splitting and the energy cost of additional domain walls \cite{cullity_introduction_2009}.
 
 A further reduction of the field energy is brought on by neighbouring domains having orthogonal magnetizations.
 The involved domains are then called flux closure domains.
 As the name implies trough the orthogonal arrangement of the domains the field loops get closed almost entirely inside the material.
 Since magnetic media have an easy direction of magnetization, flux closure domains result in the magnetization of some domains to be at an angle to this easy direction.
-This introduces two additional energetic costs to the equation \lit{Feynman}.
-Having the orientation of magnetization at an angle to the easy axis causes an energy term, the magnetocrystalline anisotropy energy $E_{\text{mc}}$, to arise as it is more energetically favourable to have the magnetic moments to align parallel to the easy axis.
+This introduces two additional energetic costs to the equation \cite{feynman_mainly_2007}.
+Having the orientation of magnetization at an angle to the easy axis causes an energy term, the magnetocrystalline anisotropy energy $E_{\text{mc}}$, to arise as it is more energetically favourable to have the magnetic moments align parallel to the easy axis.
 The magnetoelastic anisotropy energy $E_{\text{me}}$ is another term caused by a deviation of the orientation of magnetization from the easy axis.
 % As a consequence the magnetic dipoles, meaning the ions, deform slightly which induces tiny mechanical stresses on the sample and thus the emerging of such a domain comes with an energy cost.
 As a consequence, the magnetic dipoles, meaning the ions, deform slightly which induces tiny mechanical stresses on the sample, leading to a phenomenon labeled magnetostriction.
@@ -95,7 +95,7 @@ This equation
 summarizes all the different energy components involved in domain formation.
 
 The origin of AFM domains on the other hand remains controversial.
-Here, the argument that the magnetostatic field is reduced is not valid anymore, as AFM do not posses a net magnetization and no stray fields \lit{Tanner}.
+Here, the argument that the magnetostatic field is reduced is not valid anymore, as AFM do not posses a net magnetization and no stray fields \cite{tanner_antiferromagnetic_1979}.
 % The reason why AFM domains reduce the energy of the system can only be suspected.
 Tanner e.g. point out that lattice strain and defects have a big influence on the formation of AFM domains.
 Therefore a reduction of magneto-elastic energy could be the reason why generation of AFM domains is energetically favourable.
@@ -108,11 +108,11 @@ The electronic structure of Ni is $[\text{Ar}]3$d$^8 4$s$^2$.
 Entering into a covalent bond with the oxygen 2p-ions the electron configuration of Ni$^{2+}$ changes to $[\text{Ar}]3$d$^8$.
 Having a partially filled 3d-orbital in its electronic structure each Ni-ion possesses a net magnetic moment, caused by the angular momenta associated with the unpaired electrons.
 Both, the orbital angular momentum and the spin of an electron create a magnetic moment.
-For a multielectron ion such as Ni$^{2+}$ with a relatively weak spin-orbit coupling all the angular momenta of each electron couple via the Russel-Saunders coupling \lit{Ogale}.
+For a multielectron ion such as Ni$^{2+}$ with a relatively weak spin-orbit coupling all the angular momenta of each electron couple via the Russel-Saunders coupling \cite{ogale_functional_2013}.
 A big difference to other classes of magnetically ordered elements such as rare earths and actinides is the spatial position of those partially filled shells.
 As our object of interest are not single atoms, but crystals containing them, the interaction of the electrostatic crystal field with the orbital motion of the electron is not to be dissmissed.
 
-Rare earths and actinides having their partially filled orbitals (4f and 5f) screened by outer shells experience the crystal field interaction as relatively weak or rather just as a small perturbation \lit{Tanner}.
+Rare earths and actinides having their partially filled orbitals (4f and 5f) screened by outer shells experience the crystal field interaction as relatively weak or rather just as a small perturbation \cite{tanner_antiferromagnetic_1979}.
 On the other hand, the transition metals outermost orbitals are exactly those unfilled 3d-shells exposed to the crystal field.
 Here, the crystal field is strong in comparison to the spin-orbit interaction.
 This leads to a quenching of their orbital angular momentum, so that only the magnetic moment of the spin attributes to the net magnetic moment of the ions.
@@ -120,24 +120,24 @@ This leads to a quenching of their orbital angular momentum, so that only the ma
 In terms of energy levels, the d-states are degenerate without any external influence.
 The octahedral crystal field exerted by the six neighbouring O$^{2-}$ is responsible for the splitting of these d-states $\Delta_{\text{CF}}$.
 It lifts the degeneracy in the magnetic quantum number $m_l$, as it breaks the spherical symmetry by not being isotropic.
-Additionally, based on the exchange interaction a so-called exchange splitting $\Delta_{\text{Ex}}$ takes place depending on the orientation of the spins \lit{Khomskii}.
+Additionally, based on the exchange interaction a so-called exchange splitting $\Delta_{\text{Ex}}$ takes place depending on the orientation of the spins \cite{khomskii_orbital_2021}.
 If the exchange splitting is bigger than the crystal-field splitting $\Delta_{\text{Ex}} > \Delta_{\text{CF}}$, as for example in MnO, the spins occupy the lowest possible states, which results in a high-spin state, as seen in \autoref{fig:2}a.
-In NiO the exchange and crystal splitting are of similar size and the electrons would occupy a high-spin state as shown in \autoref{fig:2}b with $S=1$. But even in the case that $\Delta_{\text{CF}}$ would slightly exceed $\Delta_{\text{Ex}}$ the d$^8$-electrons would still occupy the same ground state \lit{Fromme}.
+In NiO the exchange and crystal splitting are of similar size and the electrons would occupy a high-spin state as shown in \autoref{fig:2}b with $S=1$. But even in the case that $\Delta_{\text{CF}}$ would slightly exceed $\Delta_{\text{Ex}}$ the d$^8$-electrons would still occupy the same ground state \cite{fromme_b_d-d_2001}.
 % Given, the order of the filling would change but the end result would still be the same as with $\Delta_{\text{Ex}} > \Delta_{\text{CF}}$, because the t$_{\text{2g}}$-orbital can contain three electrons and the e$_{\text{g}}$-orbital can contain two electrons, so there is no other way for the d$^8$-electrons to order.
 \begin{figure}[ht]
     \centering
     \includegraphics[width=0.8\textwidth]{pictures/2.png}
-    \caption{Schema of energy levels of \textbf{(a)} MnO and \textbf{(b)} NiO split by the exchange interaction and by the crystal field. Taken from \lit{Fromme}}
+    \caption{Schema of energy levels of \textbf{(a)} MnO and \textbf{(b)} NiO split by the exchange interaction and by the crystal field. Taken from \cite{fromme_b_d-d_2001}}
     \label{fig:2}
 \end{figure}
 \FloatBarrier
 The one-electron picture including only the Coulomb interactions makes for an intuitive understanding of the occupancy of the ground state, but it does not give the right sizes of the splitting.
 The multi-electron picture is taking into account the covalency of the 3d-electrons and the 2p-electrons from the oxygen ions and the overlap of the wavefunctions by using the Russel-Saunders (LS) terms instead of single electron states.
-As the spin-orbit interaction is small the LS-coupling is dominant summing up the angular momenta of each electron s, p, d, ... to the total angular momenta of the whole Ni$^{2-}$-ion S, P, D, ... according to the Hund's rules \lit{Ogale}.
+As the spin-orbit interaction is small the LS-coupling is dominant summing up the angular momenta of each electron s, p, d, ... to the total angular momenta of the whole Ni$^{2-}$-ion S, P, D, ... according to the Hund's rules \cite{ogale_functional_2013}.
 Now the effect of the crystal field on the Russel-Saunders split energy levels of the transition metal ion is calculated.
 The crystal field strength $Dq/B$ is taken as a parameter.
 It includes the Coulomb as well as the covalent interaction between the Ni- and O-ions.
-Plotting the energy levels against the crystal field strength gives the so called Sugano-Tanabe-diagrams \autoref{fig:4}, which can then be aligned to an absorption spectrum to extract a rough estimate for the crystal field strength, but more importantly to assign experimental results such as absorption edges or transitions to the right multiplets \lit{Fromme}.
+Plotting the energy levels against the crystal field strength gives the so called Sugano-Tanabe-diagrams \autoref{fig:4}, which can then be aligned to an absorption spectrum to extract a rough estimate for the crystal field strength, but more importantly to assign experimental results such as absorption edges or transitions to the right multiplets \cite{fromme_b_d-d_2001}.
 The result of such an approach is depicted in \autoref{fig:3}.
 \begin{figure}[ht]
     \centering
@@ -152,35 +152,45 @@ The result of such an approach is depicted in \autoref{fig:3}.
         \caption{}
         \label{fig:3}
     \end{subfigure}
-    \caption{\textbf{a)} The Sugano-Tanabe diagram for Ni$^{2+}$-ions, where the energy levels are plotted against the crystal field strength $Dq/B$. Taken from \lit{Radwanski}. \textbf{b)} The Russel-Saunders terms of the free Ni$^{2+}$-ions on the left and the crystal field splitting of the Ni$^{2+}$-ions in an octahedral field in NiO on the right. Taken from \lit{Fromme}.}
+    \caption{\textbf{a)} The Sugano-Tanabe diagram for Ni$^{2+}$-ions, where the energy levels are plotted against the crystal field strength $Dq/B$. Taken from \cite{radwanski_nio_2006}. \textbf{b)} The Russel-Saunders terms of the free Ni$^{2+}$-ions on the left and the crystal field splitting of the Ni$^{2+}$-ions in an octahedral field in NiO on the right. Taken from \cite{fromme_b_d-d_2001}.}
 \end{figure}
 \FloatBarrier
 
 \subsection{NiO}
-As mentioned above in \autoref{sec:magnetic_ordering}, the driving force behind the AFM order is the superaxchange between two Ni-ions which are positioned on opposite sites of an O-ion.
+As mentioned above in \autoref{sec:magnetic_ordering}, the driving force behind the AFM order is the superexchange between two Ni-ions which are positioned on opposite sites of an O-ion.
 In \autoref{fig:1}b its clearly visible that the AFM coupling occurs in one of the $\langle100\rangle$-directions.
 The cubic rocksalt structure of the NiO in the paramagnetic phase becomes a rhombohedral one, when going beneath the Neél-temperature of $T_N = \qty{523}{K}$ as the AFM order induces a slight contraction along one of the four equivalent $\langle111\rangle$-axes.
-As a result the optic axis also forms along this direction \lit{Rezende}.
+As a result the optic axis also forms along this direction \cite{rezende_introduction_2019}.
 In its ordered phase NiO has a cubic anisotropy, meaning two anisotropy directions.
-One is the hard axis, where all the atomic spins lie in ferromagnetic sheets in the $(111)$-plane, making it a prototypical easy-plane antiferromagnet \lit{Roth}.
+One is the hard axis, where all the atomic spins lie in ferromagnetic sheets in the $(111)$-plane, making it a prototypical easy-plane antiferromagnet \cite{roth_neutron_1960}.
 The magnetization in neighbouring sheets is reversed.
-The second anisotropy direction is the easy axis and although it was under some discussion, the consensus now is \lit{Hutchings} that the spins point in the $\langle11\overline{2}\rangle$-direction.
+The second anisotropy direction is the easy axis and although it was under some discussion, the consensus now is \cite{hutchings_measurement_1972} that the spins point in the $\langle11\overline{2}\rangle$-direction.
 
 Because the rhombohedral contraction can happen along any of the four equivalent $\langle111\rangle$-axes four twin- or T-domains exist.
 Within these T-domains there are further three equivalent $\langle11\overline{2}\rangle$-axes to which the spins can lie parallel.
-These regions of the same spin orientations within the FM sheets are called S-domains, making it a total of 12 possible domains \lit{Slack}.
+These regions of the same spin orientations within the FM sheets are called S-domains, making it a total of 12 possible domains \cite{slack_crystallography_1960}.
 The existence of these domains plays a key role in making the excitation of both magnon modes in NiO possible.
-Domains can also originate from structural defects, as the crystal structure is tightly connected to the magnetic structure \lit{\lit{Tanner}}.
+Domains can also originate from structural defects, as the crystal structure is tightly connected to the magnetic structure \cite{tanner_antiferromagnetic_1979}.
 \begin{figure}[ht]
     \centering
     \includegraphics[width=0.6\textwidth]{pictures/1.png}
-    \caption{A representation of the crystal and magnetic structure of NiO. Taken from \lit{Betto}}
+    \caption{A representation of the crystal and magnetic structure of NiO. Taken from \cite{betto_three-dimensional_2017}}
     \label{fig:1}
 \end{figure}
 \FloatBarrier
 
-\section{NiPS3}
-Belongs to a group of MPS3 materials (transition metal thiophosphates) with a metal vacancy of 2+ (lowest spin ground state of all the materials S=1; highest Neel temp of 155K)
+\subsection{NiPS3}
+NiPS3 belongs to a group of van-der-Waals transition metal thiophosphates (\textit{M}PS3 materials).
+It exhibits the lowest spin ground state $S=1$ of these materials as well as the highest Néel temperature of \qty{155}{K}.
+The crystal structure of NiPS3 is monoclinic.
+Individual 2D-layers are weakly coupled via the van-der-Waals interaction and their large spacing of  \cite{afanasiev_controlling_2021}.
+As in NiO, the magnetism is only carried by the Ni$^{2+}$-ions which are arranged on a honeycomb lattice in the ab-plane.
+Being an easy-plane AFM two magnetocrystalline anisotropies determine the orientation of the spins.
+The easy-plane anisotropy restricts the spins to a 
+The magnetic moments align into ferromagnetic zigzag-chains along the crystalographic a-axis.
+These chains couple antiferromagnetically as shown in \autoref{fig:12}.
+\autoref{fig:12}
+
 \begin{figure}[ht]
     \centering
     \begin{subfigure}[c]{0.65\textwidth}
@@ -195,7 +205,7 @@ Belongs to a group of MPS3 materials (transition metal thiophosphates) with a me
         \label{fig:8}
     \end{subfigure}
     \vspace{-0.1cm}
-    \caption{\textbf{(a)} Crystal and magnetic structure of NiPS3. The blue and red arrows at the Ni-atoms depict the AFM coupled spins. \textbf{(b)} The absorption spectrum of NiPS3, showing a d-d transition around \qty{1.1}{eV}. Both taken from \lit{Belvin}.}
+    \caption{\textbf{(a)} Crystal structure of NiPS3. The blue and red arrows at the Ni-atoms indicate the AFM coupled spins in the ordered phase. \textbf{(b)} The absorption spectrum of NiPS3 taken at \qty{20}{K}, showing a d-d transition around \qty{1.1}{eV}. Both taken from \cite{belvin_exciton-driven_2021}.}
 \end{figure}
 \FloatBarrier
 
@@ -203,11 +213,11 @@ Belongs to a group of MPS3 materials (transition metal thiophosphates) with a me
 \section{Magnon dynamics} 
 \subsection{Exciton-Magnon-Transition}
 \label{sec:x_m}
-Many absorption spectra of antiferromagnetic insulators exhibit an additional peak right next to their exciton peaks \lit{Sell} refered to as magnon sideband.
+Many absorption spectra of antiferromagnetic insulators exhibit an additional peak right next to their exciton peaks \cite{sell_review_1968} refered to as magnon sideband.
 We utilize this exciton-magnon transition to create magnons in NiO.
-An exciton is an electron-hole-pair bound together by the Coulomb interaction, created by exciting an electron above the band-gap \lit{Combescot}.
-Magnons represent collective excitations of spin waves in magnetically ordered systems \lit{Kittel}.
-The exciton peak visible in the absorption spectrum of NiO \autoref{fig:5} at around \qty{0.97}{eV} originates from the electric dipole d-d transition between the crystal field multiplets $^3A_{2g} \rightarrow \, ^3T_{2g}$ \lit{Mironova}.
+An exciton is an electron-hole-pair bound together by the Coulomb interaction, created by exciting an electron above the band-gap \cite{combescot_excitons_2015}.
+Magnons represent collective excitations of spin waves in magnetically ordered systems \cite{kittel_magnons_1959}.
+The exciton peak visible in the absorption spectrum of NiO \autoref{fig:5} at around \qty{0.97}{eV} originates from the electric dipole d-d transition between the crystal field multiplets $^3A_{2g} \rightarrow \, ^3T_{2g}$ \cite{mironova-ulmane_influence_2005}.
 All d-d transitions in centrosymmetric environments, such as the octahedral one of the Ni$^{2+}$-ions, are parity forbidden by the Laport rule $\Delta L = \pm 1$.
 This selection rule is easily explained when you consider the symmetry of the the initial wavefunction $\Psi_i$, the final wavefunction $\Psi_f$ and the transition moment operator $\mu$, when looking at the transition matrix element
 \begin{equation}
@@ -217,7 +227,7 @@ This selection rule is easily explained when you consider the symmetry of the th
 For the matrix element to be non-zero when integrating over the whole euclidian space the product $\Psi^*_f \cdot \mu \cdot \Psi_i$ inside the integral in \autoref{eqn:laport} has to have an even parity.
 For electric dipole transitions the $\mu$ is odd, so that a transition is only allowed if the initial and final wavefunction are of different parities totaling to an odd parity.
 What breaks the inversion symmetry in NiO and what allows for the d-d transition to happen is the simultaneous creation of a magnon.
-For an intuitive understanding you could think of this in the same way as thinking of a phonon with an odd vibration breaking the centrosymmetry and thus allowing d-d transitions showing itself as a phonon sideband \lit{Sell}.
+For an intuitive understanding you could think of this in the same way as thinking of a phonon with an odd vibration breaking the centrosymmetry and thus allowing d-d transitions showing itself as a phonon sideband \cite{sell_review_1968}.
 The spin-forbideness is also lifted by the magnon as it compensates the spin, which is only possible and also why we only see this in antiferromagnets.
 \begin{figure}[ht]
     \centering
@@ -232,11 +242,11 @@ The spin-forbideness is also lifted by the magnon as it compensates the spin, wh
         \caption{}
         \label{fig:6}
     \end{subfigure}
-    \caption{\textbf{(a)} The absorption of NiO in the energy range around the exciton-magnon resonance, measured at different temperatures. \textbf{(b)} A schematic representation of the energy levels and transitions involved in the exciton-magnon transition. Taken from \lit{Bossini}}
+    \caption{\textbf{(a)} The absorption of NiO in the energy range around the exciton-magnon resonance, measured at different temperatures. \textbf{(b)} A schematic representation of the energy levels and transitions involved in the exciton-magnon transition. Both taken from \cite{bossini_ultrafast_2021}.}
 \end{figure}
 \FloatBarrier
 \autoref{fig:6} shows a schematic diagram on the basis of which the explanation of the concrete process behind the exciton-magnon transition is easier to follow.
-Two Ni$^{2+}$-ions, each from one of the two sublattices, are involved in this scheme \lit{Bossini}.
+Two Ni$^{2+}$-ions, each from one of the two sublattices, are involved in this scheme \cite{bossini_ultrafast_2021}.
 First, a photon hits the first ion with spin $-S$ and raises it into an opposite parity state compared to the ground state, which is odd since the ground state is taken as even.
 This electron excitation is described as a Frenkel exciton, because the spatial extensions of the involved d-orbital are small compared to the lattice parameter, which is exactly the case for the tightly bound 3d-electron in the Ni-ions.
 The ion relaxes to its final state $|e\rangle$ with even parity, but undergoing a change in spin to $-S+1$.
@@ -249,11 +259,11 @@ Frenkel excitons with a change of spin are essentially spin waves, so this whole
 Theory predicts different AFM resonance modes depending on the model used.
 Two models are widely employed to simulate the dispersion and magnetic or temperature dependencies.
 They contain different interactions and different amounts of sublattices.
-A two-lattice model is best used to describe the two magnon modes at the Brioullin-zone center with frequencies of \qty{1.07}{THz} (hf) and \qty{0.14}{THz} (lf) \lit{Rezende} which are visible when pumping with light in the infrared region \lit{Tzschaschel}.
-There is also an eight-sublattice model predicting five different degenerate modes at $k=0$ \lit{Milano and Grimsditch, Milano}.
+A two-lattice model is best used to describe the two magnon modes at the Brioullin-zone center with frequencies of \qty{1.07}{THz} (hf) and \qty{0.14}{THz} (lf) \cite{rezende_introduction_2019} which are visible when pumping with light in the infrared region \cite{tzschaschel_ultrafast_2017}.
+There is also an eight-sublattice model predicting five different degenerate modes at $k=0$ \cite{milano_magnetic_2010}\cite{milano_effect_2004}.
 
 In this work, we concentrate on the two modes predicted with the two-lattice model.
-Apparently, the magnetic dipole-dipole interaction is responsible for the fact that the degeneracy in the magnon dispersion at the zone-center is lifted and that it is possible to observe two magnon modes. \lit{Gumarilang}
+Apparently, the magnetic dipole-dipole interaction is responsible for the fact that the degeneracy in the magnon dispersion at the zone-center is lifted and that it is possible to observe two magnon modes. \cite{gumarilang_role_2023}
 The ellipticities of the spin precessions of both modes are so extreme that they can be thought of as oscillating in a plane.
 That is why sometimes the lf-mode is referred to as ``in-plane" and the hf-mode as ``out-of-plane" mode with respect to the (111)-plane or the easy plane in each domain. This is depicted in \autoref{fig:11} with the easy plane highlighted in green and the green vector being the equilibrium position of the Néel-vector.
 \begin{figure}[htb!]
@@ -270,16 +280,16 @@ That is why sometimes the lf-mode is referred to as ``in-plane" and the hf-mode 
         \label{fig:7}
     \end{subfigure}
     \vspace{-0.3cm}
-    \caption{\textbf{(a)} Depiction of the lf- and hf-modes in a given domain. The (111)-plane is highlighted in green. \textbf{(b)} The spectral dependence of the magnon modes in a \qty{100}{\um}-thick NiO crystal measured in transmission. The dependecies are normalized to their highest values. Both taken from \lit{Bossini}.}
+    \caption{\textbf{(a)} Depiction of the lf- and hf-modes in a given domain. The (111)-plane is highlighted in green. \textbf{(b)} The spectral dependence of the magnon modes in a \qty{100}{\um}-thick NiO crystal measured in transmission. The dependecies are normalized to their highest values. Both taken from \cite{bossini_ultrafast_2021}.}
 \end{figure}
 \FloatBarrier
-\autoref{fig:7} shows the spectral dependence of the amplitudes of both modes which was measured in transmission on a \qty{100}{\um}-thick NiO crystal \lit{Bossini}.
+\autoref{fig:7} shows the spectral dependence of the amplitudes of both modes which was measured in transmission on a \qty{100}{\um}-thick NiO crystal \cite{bossini_ultrafast_2021}.
 The orange line depicts the absorption spectrum of this sample.
 On the basis of this absorption spectrum, four different areas can be identified in the spectral dependence.
 In the first area up until \qty{0.95}{eV} and in the fourth area from \qty{1.03}{eV} on, the hf-mode exhibits a negligible amplitude.
 The lf-mode on the other hand displays a finite amplitude in these areas despite there being no transitions in these regions.
-This broadening is explained in terms of the Impulsive Stimulated Raman Scattering (ISRS) \lit{Tzschaschel} which makes it possible to excite magnon modes off-resonantly \lit{2Bossini and Rasing}.
-ISRS is thought of as an effective magnetic field exerting maximum torque on spins lying perpendicular to it, so that the contributions from different T-domains do not cancel out eachother \lit{2 Kirilyuk}.
+This broadening is explained in terms of the Impulsive Stimulated Raman Scattering (ISRS) \cite{tzschaschel_ultrafast_2017} which makes it possible to excite magnon modes off-resonantly \cite{bossini_controlling_2014}\cite{bossini_femtosecond_2017}.
+ISRS is thought of as an effective magnetic field exerting maximum torque on spins lying perpendicular to it, so that the contributions from different T-domains do not cancel out eachother \cite{kirilyuk_ultrafast_2006}\cite{kirilyuk_ultrafast_2010}.
 
 Pumping the X-M peak at \qty{0.97}{eV} naturally induces the hf-magnon as explained in \autoref{sec:x_m}.
 Thus, an amplification peak is visible in \autoref{fig:7} in the second area indicated by the blue zone.
@@ -288,7 +298,7 @@ Measurements on single-domain samples reveal no amplification of the lf-mode.
 In contrast, the measurements conducted by Bossini et al. on a multidomain NiO sample, such as the ones used in this thesis, show an amplification of the lf-mode.
 In a single T-domain the two magnon modes are orthogonal eigenstates to a shared Hamiltonian.
 In a multidomain state the hf-mode in one domain can couple to the lf-mode in another domain since they are eigenstates to different Hamiltonians and are not orthogonal to eachother anymore.
-Bossini et. al. gave a phenomenological model where the coupling of the two magnon modes was mediated by domain wall oscillations \lit{Bossini}.
+Bossini et. al. gave a phenomenological model where the coupling of the two magnon modes was mediated by domain wall oscillations \cite{bossini_ultrafast_2021}.
 
 Lastly, the third region indicated by the orange zone features a lower peak which is connected to the phonon sidebands PS1 and PS2 belonging to the exciton peak.
-They are shown in the absorption spectrum in \autoref{fig:7}. and pumping them induces the X-M transition \lit{Bossini}.
+They are shown in the absorption spectrum in \autoref{fig:7}. and pumping them induces the X-M transition \cite{bossini_ultrafast_2021}.

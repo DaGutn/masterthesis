@@ -177,11 +177,13 @@
 \date{2023}
 \birthplace{Dortmund}
 \chair{Cinchetti Group}
-\division{Faculty of Physics}
+\division{Department of Physics}
 \thesisclass{Master of Science}
-\submissiondate{01. Oktober 2023}
+\submissiondate{November 24, 2023}
 \firstcorrector{Prof.~Dr.~Cinchetti}
 \secondcorrector{Prof.~Dr.~Wang}
+\supervisor{M.Sc. Sophie Bork}
+\secondsupervisor{Dr. Umut Parlak}
 
 % tu logo on top of the titlepage
 \titlehead{\includegraphics[height=1.5cm]{logos/tu-logo.pdf}}
@@ -191,25 +193,24 @@
 \renewcommand{\equationautorefname}{Eq.}
 
 \frontmatter
-% \input{content/hints.tex}
 \maketitle
 
 % Gutachterseite
-% \makecorrectorpage
+\makecorrectorpage
 
 % hier beginnt der Vorspann, nummeriert in römischen Zahlen
-% \input{content/00_abstract.tex}
+\input{content/00_abstract.tex}
 \tableofcontents
 
 \mainmatter
 % Hier beginnt der Inhalt mit Seite 1 in arabischen Ziffern
-% \input{content/01_introduction.tex}
+\input{content/01_introduction.tex}
 \input{content/02_theory.tex}
-% \input{content/03_experimental_setup.tex}
+\input{content/03_experimental_setup.tex}
 \input{content/04_results.tex}
-% \input{content/05_conclusion.tex}
+\input{content/05_conclusion.tex}
 
-% \appendix
+\appendix
 % Hier beginnt der Anhang, nummeriert in lateinischen Buchstaben
 % \input{content/a_anhang.tex}
 
@@ -218,6 +219,6 @@
 
 % \cleardoublepage
 % From https://www.tu-dortmund.de/studierende/im-studium/pruefungsangelegenheiten/allgemeine-vordrucke/
-% \includepdf{content/Eidesstattliche_Versicherung.pdf}
+\includepdf{content/Eidesstattliche_Versicherung.pdf}
 
 \end{document}

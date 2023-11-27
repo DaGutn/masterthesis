@@ -67,28 +67,34 @@
 \newcommand\thesubmissiondate{}
 \newcommand\thefirstcorrector{}
 \newcommand\thesecondcorrector{}
+\newcommand\thesupervisor{}
+\newcommand\thesecondsupervisor{}
 
 % new commands for information about the thesis
-\newcommand\birthplace[1]{\renewcommand\thebirthplace{geboren in #1}}
+\newcommand\birthplace[1]{\renewcommand\thebirthplace{born in #1}}
 \newcommand\chair[1]{\renewcommand\thechair{#1}}
 \newcommand\division[1]{\renewcommand\thedivision{#1}}
 \newcommand\thesisclass[1]{\renewcommand\thethesisclass{#1}}
 \newcommand\submissiondate[1]{\renewcommand\thesubmissiondate{#1}}
 \newcommand\firstcorrector[1]{\renewcommand\thefirstcorrector{#1}}
 \newcommand\secondcorrector[1]{\renewcommand\thesecondcorrector{#1}}
+\newcommand\supervisor[1]{\renewcommand\thesupervisor{#1}}
+\newcommand\secondsupervisor[1]{\renewcommand\thesecondsupervisor{#1}}
 
 % set title page elements
-\subject{Arbeit zur Erlangung des akademischen Grades\\ \thethesisclass}
-\publishers{\thechair \\ \thedivision \\ Technische Universität Dortmund}
+\subject{Thesis submitted in partial fulfillment of the requirements for the degree\\ \thethesisclass}
+\publishers{\thechair \\ \thedivision \\ TU Dortmund university}
 
 % page for the correctors
 \newcommand{\makecorrectorpage}{%
   \thispagestyle{empty}
   \vspace*{\fill}
   \begin{tabular}{@{}l@{\hspace{2em}}l@{}}
-      Erstgutachter:  & \thefirstcorrector \\
-      Zweitgutachter: & \thesecondcorrector \\
-      Abgabedatum:    & \thesubmissiondate
+      First corrector:  & \thefirstcorrector \\
+      Second corrector: & \thesecondcorrector \\
+      Supervisors:         & \thesupervisor \\
+                          & \thesecondsupervisor \\
+      Submission data:    & \thesubmissiondate
   \end{tabular}
   \newpage
 }
